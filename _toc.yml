@@ -1,0 +1,39 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+  - caption: 🔓 Open
+    chapters:
+    - file: OpenScience/Open_Science
+    - file: OpenSource/Opensource
+      sections:
+      - file: OpenSource/Anaconda/Anaconda_JB
+      - file: OpenSource/More/Inkscape    
+  - caption: 🌎 Online
+    chapters:
+    - file: Markdown/Markdown
+    - file: Executable-Book/Executable-Book
+      sections:
+      - file: Executable-Book/Jupyter
+      - file: Executable-Book/MyST
+    - file: Github/Github_I
+  - caption: 🚀 Interactif
+    chapters:
+    - file: Binder/Binder_JB
+  - caption: 👥 Collaboratif
+    chapters:
+    - file: Github/Github_II
+  - caption: 👀 Visible
+    chapters:
+    - file: SemanticWeb/SemanticWeb
+  - caption: and more
+    chapters:
+    - file: Design
+    - file: AI
+  - caption: Appendix
+    chapters:
+    - file: Biblio/bibliography
+
+
