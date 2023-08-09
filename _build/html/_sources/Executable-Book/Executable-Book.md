@@ -2,6 +2,13 @@
 
 The aim of this page is present the [Executable Books](https://executablebooks.org/en/latest/) Organisation and the set of tools they have designed to make science more open.
 
+## Project Jupyter
+
+**To explore**:
+
+- [Jupyter RTC](https://jupyterlab-rtc.readthedocs.io/en/latest/) - Real time collaboration ! :)
+
+
 ## Jupyter Book
 
 

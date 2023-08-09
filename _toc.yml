@@ -19,6 +19,7 @@ parts:
       - file: Executable-Book/Jupyter
       - file: Executable-Book/MyST
     - file: Github/Github_I
+    - file: Web-sites/Analytics
   - caption: 🚀 Interactif
     chapters:
     - file: Binder/Binder_JB

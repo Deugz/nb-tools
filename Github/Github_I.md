@@ -263,6 +263,12 @@ format correctly and send to Ross along with JB tutorial for him to try and gene
 
 ***
 
+## Netlify
+
+- [Netlify](https://www.netlify.com/)
+
+Auto generate your live site
+
 # Comments  
 
 

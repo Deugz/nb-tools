@@ -12,3 +12,7 @@
 
 - [SVGator](https://www.svgator.com/)
 
+### Resize page
+
+
+

@@ -38,7 +38,8 @@ html:
   
     <br><img class="CC_licence" src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-sa.svg" alt="Licence CC BY NC SA 2"/> 
     
-#  google_analytics_id       :   
+  google_analytics_id       : G-7X3HE62YKV
+
   home_page_in_navbar       : false
   baseurl                   : "https://deugz.github.io/nb-tools/_build/html/"
   comments:
@@ -48,11 +49,45 @@ html:
   announcement              : "⚠ Work in Progress  ⚠"
 
 
+  
+  
 sphinx:
+  extra_extensions:
+  - sphinx_design
+  - sphinx.ext.intersphinx
+  - sphinx_new_tab_link
   config:
     language: en
     bibtex_reference_style: author_year
     html_show_copyright: false
-  extra_extensions:
-  - sphinx_design
-  - sphinx.ext.intersphinx
+    html_theme_options: {
+    
+    "icon_links": [
+        {
+            "name": "Home",
+            "url": "https://deugz.github.io/Encyclopedia-Home/build/html/index.html",
+            "icon": "fa-solid fa-house",
+        },
+        {
+            "name": "Profile",
+            "url": "https://deugz.github.io/nb-profile/_build/html/intro.html",
+            "icon": "fa-solid fa-user",
+        },
+        {
+            "name": "Blog",
+            "url": "https://deugz.github.io/ab-blog/_website/index.html",
+            "icon": "fa-solid fa-blog",
+        },
+        {
+            "name": "Tools",
+            "url": "https://deugz.github.io/nb-tools/_build/html/intro.html",
+            "icon": "fa-solid fa-screwdriver-wrench",
+        },
+        {
+            "name": "Forum",
+            "url": "https://deugz.github.io",
+            "icon": "fa-solid fa-comments",
+        },
+    ],
+    
+    }

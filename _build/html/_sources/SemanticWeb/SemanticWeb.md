@@ -4,6 +4,43 @@
 
 ## Introduction
 
+
+
+```{figure} Docs/Semantic_Web_Stack.png
+
+
+[Source](https://commons.wikimedia.org/wiki/File:Semantic_Web_Stack.png#/media/File:Semantic_Web_Stack.png)
+```
+
+```{note}
+
+Use following termonologie to add definitions
+
+```
+
+
+- [to check](https://search.google.com/test/rich-results)
+
+```{note}
+
+Rich results from google search
+
+```
+
+### Readings
+
+- [A_Framework_for_Web_Science](https://www.researchgate.net/publication/39994660_A_Framework_for_Web_Science)
+
+```{note}
+
+To download, read and put in refs 
+
+```
+
+#### More
+
+- [Link](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4037693)
+
 :::::{div} full-width
 
 ::::{grid} 2
@@ -73,6 +110,49 @@
 ::::
 
 :::::
+
+````{admonition} Questions
+:class: warning
+
+- How does myst metadata translate into html (is it meta tags in head ?)
+
+- Can I add extra metadata within elements  by using block breaks
+
+```markdown
+
++++ {"meta": "data"}
+
+```
+
+
+````
+
+### Semantic Web and Executable books
+
+- [Frontmatter](https://myst-tools.org/docs/mystjs/frontmatter)
+
+### <strong> &#x2023; <u> Semantic Web and Science </u></strong>
+
+- [Open Graph Protocole](https://ogp.me/)
+
+```{note}
+
+To investigate because sphinx extension available !! :)
+
+```
+
+- [Sphinx extension](https://github.com/wpilibsuite/sphinxext-opengraph)
+
+#### Meta tags for html publication
+
+Based on this [page](http://div.div1.com.au/div-thoughts/div-commentaries/66-div-commentary-metadata#_HTML-meta-standards)
+
+- Highwire Press/Google Scholar citation
+- Dublin Core 
+- PRISM
+- Eprints
+- BE Press bepress_
+
 
 ### <strong> &#x2023; <u> Semantic Web and Science </u></strong>
 

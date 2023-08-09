@@ -1,4 +1,4 @@
-# Anaconda
+# Python & Anaconda
 
 Anaconda is the best place to start your data scientist journey.
 
