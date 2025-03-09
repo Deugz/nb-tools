@@ -1,0 +1,764 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RSS &#8212; Tools</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom_style.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/.ipynb_checkpoints/custom_style-checkpoint.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "https://github.com/Deugz/nb-tools");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Web-sites/RSS';</script>
+    <link rel="canonical" href="https://deugz.github.io/nb-tools/_build/html/Web-sites/RSS.html" />
+    <link rel="shortcut icon" href="../_static/tools-screwdriver-svgrepo-com.svg"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Binder" href="../Binder/Binder_JB.html" />
+    <link rel="prev" title="API" href="../API/api.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/tools-screwdriver-svgrepo-com.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/tools-screwdriver-svgrepo-com.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://deugz.github.io/Encyclopedia-Home/build/html/index.html" title="Home" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-house"></i></span>
+            <label class="sr-only">Home</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://deugz.github.io/nb-profile/_build/html/intro.html" title="Profile" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-user"></i></span>
+            <label class="sr-only">Profile</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://deugz.github.io/ab-blog/_website/index.html" title="Blog" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-blog"></i></span>
+            <label class="sr-only">Blog</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://deugz.github.io/nb-tools/_build/html/intro.html" title="Tools" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-screwdriver-wrench"></i></span>
+            <label class="sr-only">Tools</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://deugz.github.io" title="Forum" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-comments"></i></span>
+            <label class="sr-only">Forum</label></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../to-include.html">To include</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Avant de commencer</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Objectifs.html">Objectifs</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Introduction/Outils/Outils.html">Outils</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/Outils/Existants.html"><strong>Existants</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/Outils/My-Stack.html"><strong>Mes choix</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Environment.html">Mise en place de l’environement</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">🔓 Les Bases</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Bases/Open/Open_Main.html">Open</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Bases/Open/OpenScience/Open_Science.html">Open Science Ecocystem</a></li>
+
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Bases/Open/OpenSource/Opensource.html">Open Source Tools</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Bases/Open/OpenSource/Anaconda/Anaconda_JB.html">Python &amp; Anaconda</a></li>
+
+
+<li class="toctree-l3"><a class="reference internal" href="../Bases/Open/OpenSource/More/Inkscape.html">Inkscape</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Bases/Markdown/Markdown.html">Markdown</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">🌎 Online</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Executable-Book/Executable-Book.html">Executable Books</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Executable-Book/Jupyter.html">Jupyter Book</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Executable-Book/MyST.html">MyST</a></li>
+
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Github/Github_I.html">Github I</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="Analytics.html">Analytics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../API/api.html">API</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">RSS</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">🚀 Interactif</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Binder/Binder_JB.html">Binder</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">👥 Collaboratif</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Github/Github_II.html">Github II</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">👀 Visible</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../SemanticWeb/SemanticWeb.html">Semantic Web</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">and more</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Design.html">Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AI.html">AI Tools</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Biblio/bibliography.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Web-sites/RSS.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>RSS</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creer-un-fichier-rss-statique">1. Créer un fichier RSS statique</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etape-1-creer-un-fichier-rss-xml">Étape 1 : Créer un fichier <code class="docutils literal notranslate"><span class="pre">rss.xml</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etape-2-ajouter-des-articles-manuellement">Étape 2 : Ajouter des articles manuellement</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#automatiser-la-generation-du-rss-avec-github-actions">2. Automatiser la génération du RSS avec GitHub Actions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etape-1-creer-le-script-de-generation-rss">Étape 1 : Créer le script de génération RSS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etape-2-configurer-github-actions">Étape 2 : Configurer GitHub Actions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ajouter-un-lien-vers-le-flux-rss-sur-votre-site">3. Ajouter un lien vers le flux RSS sur votre site</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="rss">
+<h1>RSS<a class="headerlink" href="#rss" title="Permalink to this heading">#</a></h1>
+<p>Pour un site hébergé sur GitHub Pages, vous ne pouvez pas utiliser PHP ou tout autre langage côté serveur, mais vous pouvez toujours créer un flux RSS en utilisant du HTML et du JavaScript pour générer le fichier XML. Voici comment vous pouvez procéder :</p>
+<div class="section" id="creer-un-fichier-rss-statique">
+<h2>1. Créer un fichier RSS statique<a class="headerlink" href="#creer-un-fichier-rss-statique" title="Permalink to this heading">#</a></h2>
+<div class="section" id="etape-1-creer-un-fichier-rss-xml">
+<h3>Étape 1 : Créer un fichier <code class="docutils literal notranslate"><span class="pre">rss.xml</span></code><a class="headerlink" href="#etape-1-creer-un-fichier-rss-xml" title="Permalink to this heading">#</a></h3>
+<p>Créez un fichier nommé <code class="docutils literal notranslate"><span class="pre">rss.xml</span></code> dans votre répertoire racine ou dans un dossier spécifique de votre dépôt GitHub Pages. Ajoutez le contenu XML de base à ce fichier.</p>
+<p>Voici un exemple de structure de fichier RSS statique :</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
+<span class="nt">&lt;rss</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;2.0&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;channel&gt;</span>
+<span class="w">    </span><span class="nt">&lt;title&gt;</span>Le<span class="w"> </span>titre<span class="w"> </span>de<span class="w"> </span>votre<span class="w"> </span>site<span class="nt">&lt;/title&gt;</span>
+<span class="w">    </span><span class="nt">&lt;link&gt;</span>https://votresite.github.io<span class="nt">&lt;/link&gt;</span>
+<span class="w">    </span><span class="nt">&lt;description&gt;</span>La<span class="w"> </span>description<span class="w"> </span>de<span class="w"> </span>votre<span class="w"> </span>site<span class="nt">&lt;/description&gt;</span>
+<span class="w">    </span><span class="nt">&lt;language&gt;</span>fr<span class="nt">&lt;/language&gt;</span>
+<span class="w">    </span><span class="nt">&lt;pubDate&gt;</span>Thu,<span class="w"> </span>18<span class="w"> </span>Jul<span class="w"> </span>2024<span class="w"> </span>10:00:00<span class="w"> </span>GMT<span class="nt">&lt;/pubDate&gt;</span>
+<span class="w">    </span><span class="nt">&lt;lastBuildDate&gt;</span>Thu,<span class="w"> </span>18<span class="w"> </span>Jul<span class="w"> </span>2024<span class="w"> </span>10:00:00<span class="w"> </span>GMT<span class="nt">&lt;/lastBuildDate&gt;</span>
+<span class="w">    </span><span class="nt">&lt;generator&gt;</span>GitHub<span class="w"> </span>Pages<span class="nt">&lt;/generator&gt;</span>
+
+<span class="w">    </span><span class="cm">&lt;!-- Ajouter des articles ici --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;item&gt;</span>
+<span class="w">      </span><span class="nt">&lt;title&gt;</span>Exemple<span class="w"> </span>d&#39;article<span class="nt">&lt;/title&gt;</span>
+<span class="w">      </span><span class="nt">&lt;link&gt;</span>https://votresite.github.io/article-exemple<span class="nt">&lt;/link&gt;</span>
+<span class="w">      </span><span class="nt">&lt;description&gt;</span>La<span class="w"> </span>description<span class="w"> </span>de<span class="w"> </span>l&#39;exemple<span class="w"> </span>d&#39;article.<span class="nt">&lt;/description&gt;</span>
+<span class="w">      </span><span class="nt">&lt;pubDate&gt;</span>Thu,<span class="w"> </span>18<span class="w"> </span>Jul<span class="w"> </span>2024<span class="w"> </span>10:00:00<span class="w"> </span>GMT<span class="nt">&lt;/pubDate&gt;</span>
+<span class="w">      </span><span class="nt">&lt;guid&gt;</span>https://votresite.github.io/article-exemple<span class="nt">&lt;/guid&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/item&gt;</span>
+
+<span class="w">  </span><span class="nt">&lt;/channel&gt;</span>
+<span class="nt">&lt;/rss&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="etape-2-ajouter-des-articles-manuellement">
+<h3>Étape 2 : Ajouter des articles manuellement<a class="headerlink" href="#etape-2-ajouter-des-articles-manuellement" title="Permalink to this heading">#</a></h3>
+<p>Ajoutez vos articles dans le fichier <code class="docutils literal notranslate"><span class="pre">rss.xml</span></code>. Vous devez manuellement insérer chaque article comme indiqué ci-dessus. Voici un exemple d’article supplémentaire :</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;item&gt;</span>
+<span class="w">  </span><span class="nt">&lt;title&gt;</span>Deuxième<span class="w"> </span>article<span class="nt">&lt;/title&gt;</span>
+<span class="w">  </span><span class="nt">&lt;link&gt;</span>https://votresite.github.io/deuxieme-article<span class="nt">&lt;/link&gt;</span>
+<span class="w">  </span><span class="nt">&lt;description&gt;</span>La<span class="w"> </span>description<span class="w"> </span>du<span class="w"> </span>deuxième<span class="w"> </span>article.<span class="nt">&lt;/description&gt;</span>
+<span class="w">  </span><span class="nt">&lt;pubDate&gt;</span>Fri,<span class="w"> </span>19<span class="w"> </span>Jul<span class="w"> </span>2024<span class="w"> </span>10:00:00<span class="w"> </span>GMT<span class="nt">&lt;/pubDate&gt;</span>
+<span class="w">  </span><span class="nt">&lt;guid&gt;</span>https://votresite.github.io/deuxieme-article<span class="nt">&lt;/guid&gt;</span>
+<span class="nt">&lt;/item&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="automatiser-la-generation-du-rss-avec-github-actions">
+<h2>2. Automatiser la génération du RSS avec GitHub Actions<a class="headerlink" href="#automatiser-la-generation-du-rss-avec-github-actions" title="Permalink to this heading">#</a></h2>
+<p>Vous pouvez utiliser GitHub Actions pour automatiser la génération de votre fichier RSS à chaque mise à jour de votre site. Cela nécessite de créer un script en JavaScript (ou un autre langage) pour générer le RSS et de configurer une action GitHub pour exécuter ce script.</p>
+<div class="section" id="etape-1-creer-le-script-de-generation-rss">
+<h3>Étape 1 : Créer le script de génération RSS<a class="headerlink" href="#etape-1-creer-le-script-de-generation-rss" title="Permalink to this heading">#</a></h3>
+<p>Créez un script nommé <code class="docutils literal notranslate"><span class="pre">generate-rss.js</span></code> (ou un autre nom) à la racine de votre dépôt :</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">fs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">);</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">articles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Exemple d\&#39;article&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">link</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;https://votresite.github.io/article-exemple&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">description</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;La description de l\&#39;exemple d\&#39;article.&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">pubDate</span><span class="o">:</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(</span><span class="s1">&#39;2024-07-18T10:00:00Z&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Deuxième article&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">link</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;https://votresite.github.io/deuxieme-article&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">description</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;La description du deuxième article.&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">pubDate</span><span class="o">:</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(</span><span class="s1">&#39;2024-07-19T10:00:00Z&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="c1">// Ajouter d&#39;autres articles ici</span>
+<span class="p">];</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">rss</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
+<span class="sb">&lt;rss version=&quot;2.0&quot;&gt;</span>
+<span class="sb">  &lt;channel&gt;</span>
+<span class="sb">    &lt;title&gt;Le titre de votre site&lt;/title&gt;</span>
+<span class="sb">    &lt;link&gt;https://votresite.github.io&lt;/link&gt;</span>
+<span class="sb">    &lt;description&gt;La description de votre site&lt;/description&gt;</span>
+<span class="sb">    &lt;language&gt;fr&lt;/language&gt;</span>
+<span class="sb">    &lt;pubDate&gt;</span><span class="si">${</span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">().</span><span class="nx">toUTCString</span><span class="p">()</span><span class="si">}</span><span class="sb">&lt;/pubDate&gt;</span>
+<span class="sb">    &lt;lastBuildDate&gt;</span><span class="si">${</span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">().</span><span class="nx">toUTCString</span><span class="p">()</span><span class="si">}</span><span class="sb">&lt;/lastBuildDate&gt;</span>
+<span class="sb">    &lt;generator&gt;GitHub Pages&lt;/generator&gt;</span>
+<span class="sb">    </span><span class="si">${</span><span class="nx">articles</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">article</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="sb">`</span>
+<span class="sb">    &lt;item&gt;</span>
+<span class="sb">      &lt;title&gt;</span><span class="si">${</span><span class="nx">article</span><span class="p">.</span><span class="nx">title</span><span class="si">}</span><span class="sb">&lt;/title&gt;</span>
+<span class="sb">      &lt;link&gt;</span><span class="si">${</span><span class="nx">article</span><span class="p">.</span><span class="nx">link</span><span class="si">}</span><span class="sb">&lt;/link&gt;</span>
+<span class="sb">      &lt;description&gt;</span><span class="si">${</span><span class="nx">article</span><span class="p">.</span><span class="nx">description</span><span class="si">}</span><span class="sb">&lt;/description&gt;</span>
+<span class="sb">      &lt;pubDate&gt;</span><span class="si">${</span><span class="nx">article</span><span class="p">.</span><span class="nx">pubDate</span><span class="p">.</span><span class="nx">toUTCString</span><span class="p">()</span><span class="si">}</span><span class="sb">&lt;/pubDate&gt;</span>
+<span class="sb">      &lt;guid&gt;</span><span class="si">${</span><span class="nx">article</span><span class="p">.</span><span class="nx">link</span><span class="si">}</span><span class="sb">&lt;/guid&gt;</span>
+<span class="sb">    &lt;/item&gt;`</span><span class="p">).</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="si">}</span>
+<span class="sb">  &lt;/channel&gt;</span>
+<span class="sb">&lt;/rss&gt;`</span><span class="p">;</span>
+
+<span class="nx">fs</span><span class="p">.</span><span class="nx">writeFileSync</span><span class="p">(</span><span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;rss.xml&#39;</span><span class="p">),</span><span class="w"> </span><span class="nx">rss</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="etape-2-configurer-github-actions">
+<h3>Étape 2 : Configurer GitHub Actions<a class="headerlink" href="#etape-2-configurer-github-actions" title="Permalink to this heading">#</a></h3>
+<p>Créez un fichier <code class="docutils literal notranslate"><span class="pre">.github/workflows/generate-rss.yml</span></code> :</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Generate RSS</span>
+
+<span class="nt">on</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">push</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">branches</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+
+<span class="nt">jobs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">build</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Checkout repository</span>
+<span class="w">      </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v2</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Set up Node.js</span>
+<span class="w">      </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-node@v2</span>
+<span class="w">      </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">node-version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;14&#39;</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install dependencies</span>
+<span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">npm install</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Generate RSS feed</span>
+<span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">node generate-rss.js</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Commit and push changes</span>
+<span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">        </span><span class="no">git config --global user.name &#39;github-actions[bot]&#39;</span>
+<span class="w">        </span><span class="no">git config --global user.email &#39;github-actions[bot]@users.noreply.github.com&#39;</span>
+<span class="w">        </span><span class="no">git add rss.xml</span>
+<span class="w">        </span><span class="no">git commit -m &#39;Generate RSS feed&#39;</span>
+<span class="w">        </span><span class="no">git push</span>
+<span class="w">      </span><span class="nt">env</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">GITHUB_TOKEN</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.GITHUB_TOKEN }}</span>
+</pre></div>
+</div>
+<p>Ce workflow générera et mettra à jour le fichier <code class="docutils literal notranslate"><span class="pre">rss.xml</span></code> chaque fois que vous pousserez des modifications sur la branche principale de votre dépôt.</p>
+</div>
+</div>
+<div class="section" id="ajouter-un-lien-vers-le-flux-rss-sur-votre-site">
+<h2>3. Ajouter un lien vers le flux RSS sur votre site<a class="headerlink" href="#ajouter-un-lien-vers-le-flux-rss-sur-votre-site" title="Permalink to this heading">#</a></h2>
+<p>Ajoutez un lien vers le flux RSS sur votre site en HTML :</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://votresite.github.io/rss.xml&quot;</span><span class="p">&gt;</span>Abonnez-vous à notre flux RSS<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Cette méthode vous permettra de maintenir votre flux RSS à jour avec vos articles en utilisant GitHub Pages et GitHub Actions.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Web-sites"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../API/api.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">API</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../Binder/Binder_JB.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Binder</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creer-un-fichier-rss-statique">1. Créer un fichier RSS statique</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etape-1-creer-un-fichier-rss-xml">Étape 1 : Créer un fichier <code class="docutils literal notranslate"><span class="pre">rss.xml</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etape-2-ajouter-des-articles-manuellement">Étape 2 : Ajouter des articles manuellement</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#automatiser-la-generation-du-rss-avec-github-actions">2. Automatiser la génération du RSS avec GitHub Actions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etape-1-creer-le-script-de-generation-rss">Étape 1 : Créer le script de génération RSS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etape-2-configurer-github-actions">Étape 2 : Configurer GitHub Actions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ajouter-un-lien-vers-le-flux-rss-sur-votre-site">3. Ajouter un lien vers le flux RSS sur votre site</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By <strong>Vincent Deguin</strong> (with ❤️)
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

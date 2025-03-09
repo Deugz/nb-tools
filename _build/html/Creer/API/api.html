@@ -1,0 +1,759 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API &#8212; Tools</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom_style.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/.ipynb_checkpoints/custom_style-checkpoint.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "https://github.com/Deugz/nb-tools");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Creer/API/api';</script>
+    <link rel="canonical" href="https://deugz.github.io/nb-tools/_build/html/Creer/API/api.html" />
+    <link rel="shortcut icon" href="../../_static/tools-screwdriver-svgrepo-com.svg"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/tools-screwdriver-svgrepo-com.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/tools-screwdriver-svgrepo-com.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://deugz.github.io/Encyclopedia-Home/build/html/index.html" title="Home" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-house"></i></span>
+            <label class="sr-only">Home</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://deugz.github.io/nb-profile/_build/html/intro.html" title="Profile" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-user"></i></span>
+            <label class="sr-only">Profile</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://deugz.github.io/ab-blog/_website/index.html" title="Blog" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-blog"></i></span>
+            <label class="sr-only">Blog</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://deugz.github.io/nb-tools/_build/html/intro.html" title="Tools" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-screwdriver-wrench"></i></span>
+            <label class="sr-only">Tools</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://deugz.github.io" title="Forum" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-comments"></i></span>
+            <label class="sr-only">Forum</label></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../to-include.html">To include</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Avant de commencer</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Introduction/Intro.html">Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Introduction/Objectifs.html">Objectifs</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Introduction/Outils/Outils.html">Outils</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Introduction/Outils/Existants.html"><strong>Existants</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Introduction/Outils/My-Stack.html"><strong>Mes choix</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Introduction/Environment.html">Le Guide</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Introduction/Markdown/Markdown.html">Markdown</a></li>
+
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../Introduction/Open/Open_Main.html">Open</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Introduction/Open/OpenScience/Open_Science.html">Open Science Ecocystem</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="../../Introduction/Open/OpenSource/Opensource.html">Open Source Tools</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">and more</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Design.html">Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../AI.html">AI Tools</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Biblio/bibliography.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/Creer/API/api.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>API</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#api-prives">API Privés</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#api-publics">API Publics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#api-soap">API SOAP</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#api-rest">API REST</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#client-serveur-separation">Client-serveur separation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stateless">Stateless</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cacheable">Cacheable</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#uniforme-interface">Uniforme Interface</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#layered-system">Layered system</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#layered-system-systeme-de-couches">Layered system (système de couches)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#code-on-demand-code-a-la-demande">Code on demand (code à la demande)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">API Rest</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uri-and-endpoint">URI and Endpoint</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#xml-and-json">XML and JSON</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#xml">XML</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#json">JSON</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formuler-une-requette">Formuler une requette</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-structure-dune-requete">La structure d’une requête</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#le-verbe">Le verbe</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#luri">L’URI</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="api">
+<h1>API<a class="headerlink" href="#api" title="Permalink to this heading">#</a></h1>
+<p class="emphase">Application Programming Interface</p>
+<ul class="simple">
+<li>References:</li>
+<li><a class="reference external" href="https://openclassrooms.com/fr/courses/6573181-adoptez-les-api-rest-pour-vos-projets-web/6816951-initiez-vous-au-fonctionnement-des-api" rel="noopener noreferrer" target="_blank">Open Classroom</a></li>
+<li><a class="reference external" href="https://docs.github.com/en/rest/pages?apiVersion=2022-11-28" rel="noopener noreferrer" target="_blank">Github Rest API Doc</a></li>
+<li><a class="reference external" href="https://datatables.net/examples/plug-ins/api.html" rel="noopener noreferrer" target="_blank">API to generate tables from github issues</a></li>
+</ul>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<p>Les API créent des méthodes <strong>standardisées</strong> et <strong>réutilisables</strong> qui permettent aux développeurs d’accéder à des données spécifiques lors de la construction d’applications.</p>
+<div class="figure align-default" id="api-explained">
+<a class="reference internal image-reference" href="../../_images/web_API_OC.png"><img alt="../../_images/web_API_OC.png" src="../../_images/web_API_OC.png" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-text">Une conversation entre le client, l’API et la base de données</span><a class="headerlink" href="#api-explained" title="Permalink to this image">#</a></p>
+</div>
+<div class="section" id="api-prives">
+<h3>API Privés<a class="headerlink" href="#api-prives" title="Permalink to this heading">#</a></h3>
+<blockquote>
+<div>Une API privée permet uniquement aux utilisateurs autorisés au sein de votre entreprise ou de votre application d’utiliser l’API qui peut accéder à la base de données.</div></blockquote>
+<p>Une API permet un niveau de sécurité supplémentaire pour mieux gérer l’accès et les modifications des données, en attribuant ce qu’on appelle des droits aux personnes qui en ont besoin. Ainsi, on s’assure de contrôler les utilisateurs qui auront ou non accès à la base de données.</p>
+</div>
+<div class="section" id="api-publics">
+<h3>API Publics<a class="headerlink" href="#api-publics" title="Permalink to this heading">#</a></h3>
+<p>Contrairement aux API privées, les API que l’on appelle publiques sont utilisables par d’autres personnes, qu’elles soient sur votre application ou non. Elles permettent aux développeurs de récolter les données d’une autre application pour améliorer ou enrichir leurs propres projets sans autorisation stricte. Il existe de nombreuses manières d’utiliser des données provenant d’API tierces (ou externes).</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/toddmotto/public-apis?tab=readme-ov-file" rel="noopener noreferrer" target="_blank">Liste API publiques</a></li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Checker pour voir si il y en a que l’on peut utiliser</p>
+<ul class="last simple">
+<li>API 1</li>
+<li>API 2</li>
+</ul>
+</div>
+</div>
+<div class="section" id="api-soap">
+<h3>API SOAP<a class="headerlink" href="#api-soap" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li>Simple Object Access Protocol</li>
+</ul>
+</div>
+<div class="section" id="api-rest">
+<h3>API REST<a class="headerlink" href="#api-rest" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li>Representation state transfer</li>
+</ul>
+<p>Il y a six lignes directrices architecturales clés pour les API REST. Voyons ensemble de quoi il s’agit:</p>
+<div class="section" id="client-serveur-separation">
+<h4>Client-serveur separation<a class="headerlink" href="#client-serveur-separation" title="Permalink to this heading">#</a></h4>
+</div>
+<div class="section" id="stateless">
+<h4>Stateless<a class="headerlink" href="#stateless" title="Permalink to this heading">#</a></h4>
+</div>
+<div class="section" id="cacheable">
+<h4>Cacheable<a class="headerlink" href="#cacheable" title="Permalink to this heading">#</a></h4>
+<p>(ou sauvegardable, en français)</p>
+</div>
+<div class="section" id="uniforme-interface">
+<h4>Uniforme Interface<a class="headerlink" href="#uniforme-interface" title="Permalink to this heading">#</a></h4>
+</div>
+<div class="section" id="layered-system">
+<h4>Layered system<a class="headerlink" href="#layered-system" title="Permalink to this heading">#</a></h4>
+<p>(système de couches)</p>
+</div>
+<div class="section" id="layered-system-systeme-de-couches">
+<h4>Layered system (système de couches)<a class="headerlink" href="#layered-system-systeme-de-couches" title="Permalink to this heading">#</a></h4>
+</div>
+<div class="section" id="code-on-demand-code-a-la-demande">
+<h4>Code on demand (code à la demande)<a class="headerlink" href="#code-on-demand-code-a-la-demande" title="Permalink to this heading">#</a></h4>
+</div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>API Rest<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<div class="section" id="uri-and-endpoint">
+<h3>URI and Endpoint<a class="headerlink" href="#uri-and-endpoint" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://anapioficeandfire.com/" rel="noopener noreferrer" target="_blank">Exemple</a></li>
+</ul>
+</div>
+<div class="section" id="xml-and-json">
+<h3>XML and JSON<a class="headerlink" href="#xml-and-json" title="Permalink to this heading">#</a></h3>
+<p>Les données des API REST peuvent utiliser deux langages : XML et JSON. Si une API renvoie un set de données en XML ou en JSON, le contenu restera le même, mais la forme change. Le format de données est différent.</p>
+<div class="section" id="xml">
+<h4>XML<a class="headerlink" href="#xml" title="Permalink to this heading">#</a></h4>
+<p>En XML, chaque élément de donnée a une balise ouvrante et une balise fermante qui peut également avoir des balises imbriquées:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;series&gt;</span>
+<span class="w">  </span><span class="nt">&lt;serie&gt;</span><span class="w">    </span><span class="nt">&lt;titre&gt;</span>Game<span class="w"> </span>Of<span class="w"> </span>Thrones<span class="nt">&lt;/titre&gt;</span>
+<span class="w">    </span><span class="nt">&lt;realisateur&gt;</span>Random<span class="nt">&lt;/realisateur&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/serie&gt;</span>
+<span class="w">       </span><span class="nt">&lt;serie&gt;</span><span class="w">    </span><span class="nt">&lt;titre&gt;</span>Peaky<span class="w"> </span>Blinders<span class="nt">&lt;/titre&gt;</span><span class="w">    </span>
+<span class="nt">&lt;realisateur&gt;</span>Random<span class="nt">&lt;/realisateur&gt;</span><span class="w">  </span><span class="nt">&lt;/serie&gt;</span>
+<span class="nt">&lt;/series&gt;</span>
+
+
+<span class="nt">&lt;series&gt;</span>
+<span class="w">  </span><span class="nt">&lt;serie&gt;</span>
+<span class="w">     </span><span class="nt">&lt;titre&gt;</span>Game<span class="w"> </span>Of<span class="w"> </span>Thrones<span class="nt">&lt;/titre&gt;</span>
+<span class="w">     </span><span class="nt">&lt;realisateur&gt;</span>Random<span class="nt">&lt;/realisateur&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/serie&gt;</span>
+<span class="w">  </span><span class="nt">&lt;serie&gt;</span>
+<span class="w">     </span><span class="nt">&lt;titre&gt;</span>Peaky<span class="w"> </span>Blinders<span class="nt">&lt;/titre&gt;</span>
+<span class="w">     </span><span class="nt">&lt;realisateur&gt;</span>Random<span class="nt">&lt;/realisateur&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/serie&gt;</span>
+<span class="nt">&lt;/series&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="json">
+<h4>JSON<a class="headerlink" href="#json" title="Permalink to this heading">#</a></h4>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;series&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span><span class="w">   </span><span class="nt">&quot;titre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Game Of Thrones&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;realisateur&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Alan Taylor&quot;</span><span class="w"> </span><span class="p">},</span><span class="w">  </span><span class="p">{</span><span class="w">   </span><span class="nt">&quot;titre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Peaky Blinders&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;realisateur&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Otto Bathurst&quot;</span><span class="w"> </span><span class="p">}</span><span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="formuler-une-requette">
+<h2>Formuler une requette<a class="headerlink" href="#formuler-une-requette" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li>On utilise le logiciel <a class="reference external" href="https://www.postman.com/" rel="noopener noreferrer" target="_blank">Postman</a></li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Checker les alternatives et analyser quel est la meilleure solution</p>
+</div>
+<div class="section" id="la-structure-dune-requete">
+<h3>La structure d’une requête<a class="headerlink" href="#la-structure-dune-requete" title="Permalink to this heading">#</a></h3>
+<p>Chaque requête a une structure spécifique qui a cette forme :</p>
+<ul class="simple">
+<li>Verbe HTTP + URI + Version HTTP + Headers + Body (facultatif)</li>
+</ul>
+<div class="figure align-default" id="requette-oc">
+<a class="reference internal image-reference" href="../../_images/requette-OC.png"><img alt="../../_images/requette-OC.png" src="../../_images/requette-OC.png" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-text">Une structure de requête typique</span><a class="headerlink" href="#requette-oc" title="Permalink to this image">#</a></p>
+</div>
+<div class="section" id="le-verbe">
+<h4>Le verbe<a class="headerlink" href="#le-verbe" title="Permalink to this heading">#</a></h4>
+<p>Commençons avec le verbe. Les verbes HTTP correspondent à différents types d’actions que vous pouvez accomplir avec votre requête. Ceux que vous rencontrerez le plus couramment sont GET (obtenir), PUT (mettre), POST (publier), et DELETE (supprimer). Ne vous y attardez pas trop pour le moment, nous les étudierons tous plus en détail plus tard !</p>
+<ul class="simple">
+<li>Get</li>
+<li>…</li>
+</ul>
+</div>
+<div class="section" id="luri">
+<h4>L’URI<a class="headerlink" href="#luri" title="Permalink to this heading">#</a></h4>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Creer\API"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#api-prives">API Privés</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#api-publics">API Publics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#api-soap">API SOAP</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#api-rest">API REST</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#client-serveur-separation">Client-serveur separation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stateless">Stateless</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cacheable">Cacheable</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#uniforme-interface">Uniforme Interface</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#layered-system">Layered system</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#layered-system-systeme-de-couches">Layered system (système de couches)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#code-on-demand-code-a-la-demande">Code on demand (code à la demande)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">API Rest</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uri-and-endpoint">URI and Endpoint</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#xml-and-json">XML and JSON</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#xml">XML</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#json">JSON</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formuler-une-requette">Formuler une requette</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-structure-dune-requete">La structure d’une requête</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#le-verbe">Le verbe</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#luri">L’URI</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By <strong>Vincent Deguin</strong> (with ❤️)
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

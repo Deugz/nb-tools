@@ -1,0 +1,1318 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Open Science Ecocystem &#8212; Tools</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom_style.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/.ipynb_checkpoints/custom_style-checkpoint.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "https://github.com/Deugz/nb-tools");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Introduction/Open/OpenScience/Open_Science';</script>
+    <link rel="canonical" href="https://deugz.github.io/nb-tools/_build/html/Introduction/Open/OpenScience/Open_Science.html" />
+    <link rel="shortcut icon" href="../../../_static/tools-screwdriver-svgrepo-com.svg"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Open Source Tools" href="../OpenSource/Opensource.html" />
+    <link rel="prev" title="Open" href="../Open_Main.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/tools-screwdriver-svgrepo-com.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../../_static/tools-screwdriver-svgrepo-com.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://deugz.github.io/Encyclopedia-Home/build/html/index.html" title="Home" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-house"></i></span>
+            <label class="sr-only">Home</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://deugz.github.io/nb-profile/_build/html/intro.html" title="Profile" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-user"></i></span>
+            <label class="sr-only">Profile</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://deugz.github.io/ab-blog/_website/index.html" title="Blog" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-blog"></i></span>
+            <label class="sr-only">Blog</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://deugz.github.io/nb-tools/_build/html/intro.html" title="Tools" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-screwdriver-wrench"></i></span>
+            <label class="sr-only">Tools</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://deugz.github.io" title="Forum" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-comments"></i></span>
+            <label class="sr-only">Forum</label></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../to-include.html">To include</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Avant de commencer</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Intro.html">Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Objectifs.html">Objectifs</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Outils/Outils.html">Outils</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Outils/Existants.html"><strong>Existants</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Outils/My-Stack.html"><strong>Mes choix</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../Environment.html">Le Guide</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../Markdown/Markdown.html">Markdown</a></li>
+
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../Open_Main.html">Open</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Open Science Ecocystem</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="../OpenSource/Opensource.html">Open Source Tools</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">📂 Organiser</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../Organiser/Organiser.html">Panorama</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../Organiser/Veille/Veille-main.html">Veille</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../Organiser/Veille/Info/Veille-info.html">Informationnel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Organiser/Veille/Techno/Veille-techno.html">Technologique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Organiser/Veille/Concu/Veille-concu.html">Concurrentiel</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../Organiser/Tableau-blanc/Orga-Test.html">Tableau Blanc</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../Organiser/Tableau-blanc/Miro.html">Miro</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">🎨 Créer</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../Creer/Executable-Book/Executable-Book.html">Executable Books</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../Creer/Executable-Book/Jupyter.html">Jupyter Book</a></li>
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../Creer/Dessin-vectoriel/DV-Main.html">Dessin Vectoriel</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../Creer/Dessin-vectoriel/Inkscape.html">Inkscape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Creer/Dessin-vectoriel/Illustrator/Illustrator.html">Illustrator</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../Creer/E-Learning/E-learning-main.html">Modules E-Learning</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../Creer/E-Learning/Storyline.html">Storyline</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../../Creer/E-Learning/Genially.html">Genially</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../Creer/Video/Video-main.html">Vidéo &amp; Animation</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../Creer/Video/Vyond/Vyond-test.html">Vyond</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../Creer/Web-sites/web-site-main.html">Sites Web</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../Creer/Web-sites/Wordpress/Wordpress.html">Wordpress</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">⚡ Animer</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../Animer/Presentation/Support-Pres.html">Support de Présentation</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../Animer/Presentation/Canva/Canva.html">Canva</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../Animer/Soft-skills/Soft-skills.html">Soft Skills</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../Animer/Soft-skills/CNV/CNV.html">Com Non Viloente</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../Animer/Classe-virtuel/Class-Virtuelle.html">Classe Virtuelle</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../Animer/Classe-virtuel/Tests/Klaxoon.html">Klaxoon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Animer/Classe-virtuel/Tests/Digiscreen.html">Digiscreen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Animer/Communaute/Communaut%C3%A9-main.html">Communauté Apprenants</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">🔍 Analyser</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../Analyser/Python/Python-main.html">Python</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">📦 Heberger</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../H%C3%A9berger/Github/Github_I.html">Github I</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">🔗 Connecter</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../Connecter/API/api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Connecter/SemanticWeb/SemanticWeb.html">Semantic Web</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">🤝 Collaborer</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../Collaborer/Collaborer-Main.html">Collaborer</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">and more</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../Design.html">Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../AI.html">AI Tools</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../Biblio/bibliography.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/Introduction/Open/OpenScience/Open_Science.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Open Science Ecocystem</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Open Science Ecocystem</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strong-u-open-science-u-strong"><strong> ‣ <u> Open Science </u></strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strong-u-good-guides-u-strong"><strong> ‣ <u> Good Guides </u></strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#strong-the-turing-way-strong"><strong> ‣ ‣ The Turing Way </strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tools">Tools</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strong-u-open-science-tools-u-strong"><strong> ‣ <u> Open Science Tools </u></strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisation">Visualisation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#edition">Edition</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wiki">Wiki</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#poster-presentation">Poster presentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#timelines">Timelines</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hosting">Hosting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#github">Github</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rohub">Rohub</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#more">More</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-by-step-guide-creator">Step by step guide creator</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#education-websites">Education websites</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#as-far-as-i-am-concerned">As far as I am concerned</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-others">For others</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other-tools-on-the-market">Other tools on the market</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#citizen-science-programs">Citizen Science programs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other-cool-scientific-web-sites">Other cool Scientific web-sites</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#science">Science</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#coding">Coding</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coups-de-perso">Coups de 💖 perso</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-science">Open Science</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#comments">Comments</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="open-science-ecocystem">
+<h1>Open Science Ecocystem<a class="headerlink" href="#open-science-ecocystem" title="Permalink to this heading">#</a></h1>
+<hr class="docutils" />
+<blockquote class="epigraph">
+<div>There is currently a lot of Open Tools available on the market. The biggest difficulties is to actually find them sor here is a quick overview of those I found so far</div></blockquote>
+<div class="admonition-to-include admonition">
+<p class="first admonition-title">To include</p>
+<ul class="last simple">
+<li><a class="reference external" href="https://etherpad.org/doc/v1.2.1/" rel="noopener noreferrer" target="_blank">Etherpad</a></li>
+<li><a class="reference external" href="https://obsproject.com/" rel="noopener noreferrer" target="_blank">OBS</a> - Open Broadcasting</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="admonition-to-add admonition">
+<p class="first admonition-title">To add</p>
+<ul class="last simple">
+<li>Data Sharing<ul>
+<li><a class="reference external" href="https://iopscience.iop.org/article/10.3847/1538-4365/ac6268/pdf" rel="noopener noreferrer" target="_blank">Best Practices for Data Publication in the Astronomical Literature</a></li>
+<li><a class="reference external" href="https://www.nature.com/articles/d41586-023-01929-7" rel="noopener noreferrer" target="_blank">How to make your scientific data accessible, discoverable and useful</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<div class="section" id="strong-u-open-science-u-strong">
+<h3><strong> ‣ <u> Open Science </u></strong><a class="headerlink" href="#strong-u-open-science-u-strong" title="Permalink to this heading">#</a></h3>
+<div class="full-width docutils">
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 docutils">
+<div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
+<blockquote>
+<div>I have written two blogposts that I think are good introduction to the topic of Open Research. Click on the cards if you want to know more</div></blockquote>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Insert good links, when Blog web-site ready</p>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-col-3 sd-col-xs-3 sd-col-sm-3 sd-col-md-3 sd-col-lg-3 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-header bg-light docutils">
+<p class="sd-card-text"><strong>Scientifique Publication</strong></p>
+</div>
+<div class="sd-card-body docutils">
+</div>
+<a class="sd-stretched-link reference external" href="https://deugz.github.io/nb-master/_build/html/Blog/Posts/Scientific_Publication.html" rel="noopener noreferrer" target="_blank"></a></div>
+</div>
+<div class="sd-col sd-d-flex-row sd-col-3 sd-col-xs-3 sd-col-sm-3 sd-col-md-3 sd-col-lg-3 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-header bg-light docutils">
+<p class="sd-card-text"><strong>Open Science</strong></p>
+</div>
+<div class="sd-card-body docutils">
+</div>
+<a class="sd-stretched-link reference external" href="https://deugz.github.io/nb-master/_build/html/Blog/Posts/Scientific_Publication.html" rel="noopener noreferrer" target="_blank"></a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="strong-u-good-guides-u-strong">
+<h3><strong> ‣ <u> Good Guides </u></strong><a class="headerlink" href="#strong-u-good-guides-u-strong" title="Permalink to this heading">#</a></h3>
+<div class="section" id="strong-the-turing-way-strong">
+<h4><strong> ‣ ‣ The Turing Way </strong><a class="headerlink" href="#strong-the-turing-way-strong" title="Permalink to this heading">#</a></h4>
+<div class="full-width docutils">
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
+<div class="sd-col sd-d-flex-column sd-col-9 sd-col-xs-9 sd-col-sm-9 sd-col-md-9 sd-col-lg-9 docutils">
+<blockquote>
+<div>Great source of documentation for open data science.</div></blockquote>
+<div class="note dropdown admonition">
+<p class="first admonition-title">Images - Scriberia</p>
+<p><strong>Documents</strong>:</p>
+<ul class="simple">
+<li>Images: from Scriberia - licence CC <a class="reference external" href="https://zenodo.org/record/3695300#.YvZLvRzMKUk" rel="noopener noreferrer" target="_blank">Zenodo_img_repo</a></li>
+</ul>
+<p>caption must include :</p>
+<ul class="simple">
+<li>This image was created by Scriberia for The Turing Way community and is used under a CC-BY licence</li>
+</ul>
+<p class="last"><a class="reference external" href="https://alexwlchan.net/2020/02/adjusting-the-dominant-colour-of-an-image/" rel="noopener noreferrer" target="_blank">Modify_image_main color</a></p>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-col-3 sd-col-xs-3 sd-col-sm-3 sd-col-md-3 sd-col-lg-3 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-header bg-light docutils">
+<p class="sd-card-text"><strong>The Turing Way</strong></p>
+</div>
+<div class="sd-card-body docutils">
+<img alt="../../../_images/The_Turing_Way_Logo.png" src="../../../_images/The_Turing_Way_Logo.png" />
+</div>
+<a class="sd-stretched-link reference external" href="https://the-turing-way.netlify.app/index.html" rel="noopener noreferrer" target="_blank"></a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="tools">
+<h2>Tools<a class="headerlink" href="#tools" title="Permalink to this heading">#</a></h2>
+<div class="full-width docutils">
+<p class="emphase">There is lots of Scientific tools to accompany you during your entire scientific journey</p>
+<br>
+<div class="figure align-default" id="id3">
+<img alt="../../../_images/compliance-tools-workflow_cropped.png" src="../../../_images/compliance-tools-workflow_cropped.png" />
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text"><a class="reference external" href="https://101innovations.wordpress.com/workflows/" rel="noopener noreferrer" target="_blank">Source</a></span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
+</div>
+<div class="admonition-to-expolore admonition">
+<p class="first admonition-title">To expolore</p>
+<ul class="last simple">
+<li><a class="reference external" href="https://docs.google.com/spreadsheets/d/1KUMSeq_Pzp4KveZ7pb5rddcssk1XBTiLHniD0d3nDqo/edit#gid=0" rel="noopener noreferrer" target="_blank">400+ Tools Sheet</a></li>
+</ul>
+</div>
+</div>
+<div class="full-width docutils">
+<p class="emphase"> But <strong> be mindfull </strong></p>
+<br>
+<div class="figure align-default" id="id4">
+<img alt="../../../_images/Elsevier_toolkit.png" src="../../../_images/Elsevier_toolkit.png" />
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Above are some Research tools owned by <strong>Elsevier</strong>. Now remember that half of Elsevier profit come from analytics <a class="reference external" href="https://101innovations.wordpress.com/workflows/" rel="noopener noreferrer" target="_blank">Source</a></span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
+</div>
+<br>
+<p class="emphase"><em>If you are not paying for a service; You are the product being sold.</em></p>
+</div>
+<div class="section" id="strong-u-open-science-tools-u-strong">
+<h3><strong> ‣ <u> Open Science Tools </u></strong><a class="headerlink" href="#strong-u-open-science-tools-u-strong" title="Permalink to this heading">#</a></h3>
+<div class="margin sidebar">
+<p class="first sidebar-title"></p>
+<div class="seealso last admonition">
+<p class="first admonition-title"><strong>Other Online tools</strong></p>
+<p><strong>litterature review</strong></p>
+<ul class="simple">
+<li><a class="reference external" href="https://www.citationgecko.com/" rel="noopener noreferrer" target="_blank">Citation Gecko</a></li>
+<li><a class="reference external" href="https://www.litmaps.com/" rel="noopener noreferrer" target="_blank">Litmaps</a></li>
+<li><a class="reference external" href="https://www.connectedpapers.com/" rel="noopener noreferrer" target="_blank">Connected Papers</a></li>
+</ul>
+<p><strong>Research Management</strong></p>
+<ul class="simple">
+<li><a class="reference external" href="https://osf.io/" rel="noopener noreferrer" target="_blank">OSF</a></li>
+</ul>
+<p><strong>Iterative documents build</strong></p>
+<ul class="simple">
+<li><a class="reference external" href="https://makeuseofdata.com/index.html" rel="noopener noreferrer" target="_blank">Data Science Notes</a></li>
+<li><a class="reference external" href="https://goodresearch.dev/index.html" rel="noopener noreferrer" target="_blank">Good research code handbook</a></li>
+</ul>
+<p><strong>Data processing softwares</strong></p>
+<ul class="simple">
+<li><a class="reference external" href="https://www.acdlabs.com/products/spectrus-platform/spectrus-processor/" rel="noopener noreferrer" target="_blank">ACD/Labs</a></li>
+</ul>
+<p><strong>Example</strong></p>
+<ul class="last simple">
+<li><a class="reference external" href="https://lorenabarba.com/" rel="noopener noreferrer" target="_blank">Lorana A. Barba website</a></li>
+<li><a class="reference external" href="https://inspirehep.net/" rel="noopener noreferrer" target="_blank">High-Energy Physics</a></li>
+</ul>
+</div>
+</div>
+<ul class="simple">
+<li>Paragraph to explain in plain text the aformentioned benefits</li>
+</ul>
+<p>I guess for me, if I had to pick only one, the best advantage is the ability to take notes informaticaly. I have never been consistent in taking hand written notes, and would often leave them uncomplitted, all over the place … a real nightmare.</p>
+<div class="dropdown admonition">
+<p class="first admonition-title">Dialogue <img alt="flag alt &gt;" src="Introduction/Open/_static/SVG_icons/dark-dialogue-bubble-svgrepo-com.svg" /> - <img alt="flag alt &gt;" src="Introduction/Open/_static/SVG_icons/flag-for-flag-france-svgrepo-com.svg" /></p>
+<p class="last">Alors certe, il y a probablement des outils plus efficaces et rapides sur le marche, mais j’aime faire <strong>l’apologie de la lenteur</strong>, d’autant plus qu’elle s’accompagne de nombreux benefices egalement …</p>
+</div>
+<ul class="simple">
+<li>Link with <strong>Semantic web</strong> cf Project Roadmap (Anchored)</li>
+</ul>
+<br>
+<br>
+</div>
+</div>
+<div class="section" id="data">
+<h2>Data<a class="headerlink" href="#data" title="Permalink to this heading">#</a></h2>
+<hr class="docutils" />
+<ul class="simple">
+<li><a class="reference external" href="https://towardsdatascience.com/10-free-tools-to-instantly-get-started-with-data-visualisation-d7fadb5f6dce" rel="noopener noreferrer" target="_blank">article 11 free tools</a></li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li><a class="reference external" href="https://plotly.com/" rel="noopener noreferrer" target="_blank">Plotly</a></li>
+</ul>
+<div class="section" id="visualisation">
+<h3>Visualisation<a class="headerlink" href="#visualisation" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://flourish.studio/pricing/" rel="noopener noreferrer" target="_blank">Flourish</a> html embed needs entreprise account</li>
+<li><a class="reference external" href="https://www.rawgraphs.io/" rel="noopener noreferrer" target="_blank">RAWGraph</a> Graph can be exported in svg (no html embed)</li>
+</ul>
+</div>
+</div>
+<div class="section" id="edition">
+<h2>Edition<a class="headerlink" href="#edition" title="Permalink to this heading">#</a></h2>
+<div class="section" id="wiki">
+<h3>Wiki<a class="headerlink" href="#wiki" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://www.dokuwiki.org/dokuwiki" rel="noopener noreferrer" target="_blank">DokuWiki</a></li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>work using php -&gt; Need to have web-hosting solution<ul>
+<li>Raspberry Pi web server as a free and self own hosting solution ?</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="poster-presentation">
+<h3>Poster presentation<a class="headerlink" href="#poster-presentation" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://www.youtube.com/watch?v=1RwJbhkCA58" rel="noopener noreferrer" target="_blank">Youtube tutorial</a></li>
+<li><a class="reference external" href="https://www.youtube.com/watch?v=uj_Maf-xdhw" rel="noopener noreferrer" target="_blank">Multi plateform sharing</a></li>
+<li><strong>Softwares</strong></li>
+</ul>
+</div>
+<div class="section" id="timelines">
+<h3>Timelines<a class="headerlink" href="#timelines" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://timeline.knightlab.com/#examples" rel="noopener noreferrer" target="_blank">timeline - knightlab</a><ul>
+<li>To test in Teaching Astro-History</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="hosting">
+<h2>Hosting<a class="headerlink" href="#hosting" title="Permalink to this heading">#</a></h2>
+<div class="section" id="github">
+<h3>Github<a class="headerlink" href="#github" title="Permalink to this heading">#</a></h3>
+</div>
+<div class="section" id="rohub">
+<h3>Rohub<a class="headerlink" href="#rohub" title="Permalink to this heading">#</a></h3>
+<p>?</p>
+<ul class="simple">
+<li><a class="reference external" href="https://the-environmental-ds-book.netlify.app/gallery/exploration/urban-exploration-climate_ukv/urban-exploration-climate_ukv.html" rel="noopener noreferrer" target="_blank">Example Jupyter Book</a></li>
+<li><a class="reference external" href="https://reliance.rohub.org/1b8921af-e77f-4ccf-ae38-4813cdceba0f?activetab=overview" rel="noopener noreferrer" target="_blank">Rohub hosting example</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="more">
+<h2>More<a class="headerlink" href="#more" title="Permalink to this heading">#</a></h2>
+<div class="section" id="step-by-step-guide-creator">
+<h3>Step by step guide creator<a class="headerlink" href="#step-by-step-guide-creator" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://scribehow.com/" rel="noopener noreferrer" target="_blank">Scribehow</a></li>
+</ul>
+</div>
+<div class="section" id="education-websites">
+<h3>Education websites<a class="headerlink" href="#education-websites" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://www.wolframalpha.com/" rel="noopener noreferrer" target="_blank">wolframalpha</a></li>
+</ul>
+</div>
+<div class="section" id="as-far-as-i-am-concerned">
+<h3>As far as I am concerned<a class="headerlink" href="#as-far-as-i-am-concerned" title="Permalink to this heading">#</a></h3>
+<div class="emphase">
+    Notebook 3000
+</div>
+<p>This plateform is an incredible tool</p>
+<p>Yet, there is some other tools:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://www.notion.so/product" rel="noopener noreferrer" target="_blank">Notion</a></li>
+</ul>
+<div class="emphase">
+    Research Portefolio
+</div>
+<p>Display my research outputs with a multitude of audiences</p>
+<ul class="simple">
+<li>Supervisory teams</li>
+<li></li>
+</ul>
+<p><strong>Enhanced reproducibility</strong></p>
+<p>spectrum</p>
+<div class="figure align-default" id="id5">
+<a class="reference internal image-reference" href="Introduction/Open/OpenScience/Docs/Reproducibility_Spectrum.PNG"><img alt="Introduction/Open/OpenScience/Docs/Reproducibility_Spectrum.PNG" src="Introduction/Open/OpenScience/Docs/Reproducibility_Spectrum.PNG" style="width: 650px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">source: <span id="id1">[<a class="reference internal" href="../../../Biblio/bibliography.html#id12" title="Roger D. Peng. Reproducible research in computational science. Science, 334:1226-1227, 12 2011. doi:10.1126/science.1213847.">Peng, 2011</a>]</span></span><a class="headerlink" href="#id5" title="Permalink to this image">#</a></p>
+</div>
+<ul class="simple">
+<li>Data is accessible <code class="docutils literal notranslate"><span class="pre">zenodo</span></code> …</li>
+<li>Code is interactive (<code class="docutils literal notranslate"><span class="pre">binder</span></code>), commentable (<code class="docutils literal notranslate"><span class="pre">hypotesis</span></code>), reproducible(<code class="docutils literal notranslate"><span class="pre">Github</span></code>) …</li>
+</ul>
+<div class="emphase">
+    Project Management
+</div>
+<p>Great as a ressource to pass on for futur people involved in a project (cf Postdoc example)</p>
+<div class="emphase">
+    Teaching Plateform
+</div>
+<p>Collaborative?</p>
+<div class="emphase">
+    Blog 2.0 - fitted for Research
+</div>
+<p>Insert project description + aims (use pictures from touring way)</p>
+</div>
+<div class="section" id="for-others">
+<h3>For others<a class="headerlink" href="#for-others" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li>Prepare tutorial to get ready for Jupyter Book</li>
+<li>Create a template book</li>
+<li></li>
+</ul>
+<p class="emphase">Empower Researchers with an <strong>Open Toolbox</strong> to <strong>Self Publish</strong></p>
+</div>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h2>
+<div class="section" id="other-tools-on-the-market">
+<h3>Other tools on the market<a class="headerlink" href="#other-tools-on-the-market" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://quarto.org/" rel="noopener noreferrer" target="_blank">Quarto</a>, looks more professional, more versatil (ie R, Julia), but more complicated and code intensive, less accessible.</li>
+<li><a class="reference external" href="https://ourresearch.org/" rel="noopener noreferrer" target="_blank">OurResearch</a>, various tools to make research more open:<ul>
+<li>to check in more details</li>
+</ul>
+</li>
+<li><a class="reference external" href="https://cactusglobal.com/" rel="noopener noreferrer" target="_blank">Cactus</a></li>
+<li><a class="reference external" href="https://www.astrobetter.com/" rel="noopener noreferrer" target="_blank">Astrobetter</a></li>
+<li><a class="reference external" href="https://www.open.edu/openlearncreate/" rel="noopener noreferrer" target="_blank">Open Learn Create</a>, create your own course material</li>
+<li><a class="reference external" href="https://phdservices.org/" rel="noopener noreferrer" target="_blank">PhD service.org</a>, a scam ?</li>
+<li><a class="reference external" href="https://themes.gohugo.io/themes/starter-hugo-academic/" rel="noopener noreferrer" target="_blank">Hugo web-site theme</a></li>
+</ul>
+</div>
+<div class="section" id="citizen-science-programs">
+<h3>Citizen Science programs<a class="headerlink" href="#citizen-science-programs" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://www.zooniverse.org" rel="noopener noreferrer" target="_blank">Zooniverse</a></li>
+<li><a class="reference external" href="https://cos4cloud-eosc.eu/" rel="noopener noreferrer" target="_blank">Cos4Cloud</a> European project for producing Citizen science tools<ul>
+<li><a class="reference external" href="https://www.ispotnature.org/" rel="noopener noreferrer" target="_blank">ISpot</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="other-cool-scientific-web-sites">
+<h3>Other cool Scientific web-sites<a class="headerlink" href="#other-cool-scientific-web-sites" title="Permalink to this heading">#</a></h3>
+<div class="section" id="science">
+<h4>Science<a class="headerlink" href="#science" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><a class="reference external" href="http://astrochymist.org/" rel="noopener noreferrer" target="_blank">Astrochemistry</a></li>
+<li><a class="reference external" href="https://astrobiology.com/" rel="noopener noreferrer" target="_blank">Astrobiology</a></li>
+<li><a class="reference external" href="http://exoplanet.eu/team/" rel="noopener noreferrer" target="_blank">Exoplanet counter</a></li>
+<li><a class="reference external" href="http://www.mantleplumes.org/" rel="noopener noreferrer" target="_blank">mantleplumes</a></li>
+</ul>
+</div>
+<div class="section" id="coding">
+<h4>Coding<a class="headerlink" href="#coding" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><a class="reference external" href="https://neetcode.io/" rel="noopener noreferrer" target="_blank">neetcode</a></li>
+<li></li>
+</ul>
+</div>
+</div>
+<div class="section" id="coups-de-perso">
+<h3>Coups de 💖 perso<a class="headerlink" href="#coups-de-perso" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://www.rivenature33.com/" rel="noopener noreferrer" target="_blank">JIM</a></li>
+</ul>
+<p>Mon ami Jimi est une personne incroyable</p>
+<ul class="simple">
+<li><span class="xref myst">Barry</span></li>
+</ul>
+</div>
+</div>
+<div class="section" id="open-science">
+<h2>Open Science<a class="headerlink" href="#open-science" title="Permalink to this heading">#</a></h2>
+<h3><strong>&#187;  <u>Communication</u></strong></h3>
+<img src="https://imgs.xkcd.com/comics/feature_comparison.png" />
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>reproduce with science communication methods</li>
+</ul>
+</div>
+<h4><strong> Create a dialogue</strong></h4>
+<p>The most beatifull part of having your work hosted in the internet is that people (all people, cf below) can interact with it and comment, ask questions …</p>
+<div class="margin sidebar">
+<p class="first sidebar-title"></p>
+<div class="admonition-financial-support last admonition">
+<p class="first admonition-title">Financial support</p>
+<p class="last">Reaching an audience would allow the potential for financial support</p>
+</div>
+</div>
+<ul class="simple">
+<li>ton de la conversation</li>
+<li>Bienveillance</li>
+</ul>
+<p>Dont la finalite n’est pa de generer de l’argent mais bien de creer le dialogue. Quand bien meme des possibilites de soutien financiere sont possibles.</p>
+<h4><strong> For All Audiences</strong></h4>
+<div class="margin sidebar">
+<p class="first sidebar-title"></p>
+<div class="admonition-idea-for-later last admonition">
+<p class="first admonition-title">Idea for later</p>
+<ul class="last simple">
+<li>Add span div that appear when the fish in aquarium is hovered.</li>
+<li>Create specific admonitions for each fish type</li>
+<li>Add student fish (floating on his back at surface ^^)</li>
+</ul>
+</div>
+</div>
+<p>I aim to deliver content for <strong>everybody</strong> <code class="docutils literal notranslate"><span class="pre">interested</span> <span class="pre">in</span> <span class="pre">Science</span></code>, so let me know who you are and I will point you in the right direction.</p>
+<article id="P1">
+<div id="subdiv2-3">
+<img alt="Introduction/Open/_static/Images/Aquarium.png" id="aquarium" src="Introduction/Open/_static/Images/Aquarium.png" />
+</div>
+<div id="subdiv1-3">    
+<p><strong>Legend</strong></p>
+<p><img alt="flag alt &gt;" src="Introduction/Open/_static/Svg_icons/Fish/fish-svgrepo-com.svg" /> <span class="hovertext" data-hover="Yes, I think Science must be shared with everyone and it is the responsability of scientists to find new publication methods and formats to achieve this goal.">Anyone</span></p>
+<p><img alt="flag alt &gt;" src="Introduction/Open/_static/Svg_icons/Fish/turtle-svgrepo-com.svg" /> Friends/Colleagues</p>
+<p><img alt="flag alt &gt;" src="Introduction/Open/_static/Svg_icons/Fish/fish-light-svgrepo-com.svg" /> Teachers</p>
+<p><img alt="flag alt &gt;" src="Introduction/Open/_static/Svg_icons/Fish/fish-nemo-svgrepo-com.svg" /> Researchers (other fields)</p>
+<p><img alt="flag alt &gt;" src="Introduction/Open/_static/Svg_icons/Fish/shark-svgrepo-com.svg" /> Researchers (my field)</p>
+<p><img alt="flag alt &gt;" src="Introduction/Open/_static/Svg_icons/Fish/pieuvre.jpg" /> Supervision team</p>
+</div>
+</article>
+<h4><strong> To have access to Science</strong></h4>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Create svg diagram of scale (different level), and fish at every scale with lift to help them climb.</p>
+</div>
+<h3><strong>&#187;  <u>Sociale & politique</u></strong></h3>
+<p><span class="hovertext" data-hover="Within political philosophy and particularly in the work of Chantal Mouffe and Hannah Arendt, “agonism” has been described as representing the notion of being able to challenge and dissent in a productive way">agonistic</span> publishing</p>
+<ul class="simple">
+<li><span id="id2">[<a class="reference internal" href="../../../Biblio/bibliography.html#id11" title="George Koutsouris, Lauren Stentiford, Simon Benham-Clarke, and David Hall. Agonism in education: a systematic scoping review and discussion of its educational potential. Educational Review, 74:1029-1054, 7 2022. doi:10.1080/00131911.2021.1889983.">Koutsouris <em>et al.</em>, 2022</a>]</span></li>
+<li>dissociative and associative agonism</li>
+</ul>
+<h4><strong> Benefits</strong></h4>
+<ul class="simple">
+<li>More <strong>impact</strong> on Society</li>
+<li>Enseignement</li>
+<li>Créer une société de chercheurs indépendants<ul>
+<li>délivré de la bureaucratie qui gangrène le milieu accadémique, mais également du monopole des sociétés de publication.</li>
+</ul>
+</li>
+</ul>
+<p>I am imagining a world where researchers would be <strong>free</strong> to publish their work in their own terms, far from the current commercial scientific publication system. The internet as provided the emergence of countless <strong>open and free softwares</strong> (cf margin) that are now making this world a reality. This website is an experiment to show an exemple and highlighting all the benefits given by adopting this approach, there is a few</p>
+<h3><strong>&#187;  <u> Benefits for ... </u></strong></h3>
+<div class="full-width docutils">
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 docutils">
+<div>
+<h4><strong>You, researchers</strong></h4>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text">Break free from commercial scientific publication by creating your own <strong>accademic profile</strong>. You will get a lifelong publication plateform that is self maintained and hence, owned by you. It can welcome <strong>all your scientific outputs</strong>:</p>
+<ul class="simple">
+<li><p class="sd-card-text first">Articles</p>
+</li>
+<li><p class="sd-card-text first">Data</p>
+</li>
+<li><p class="sd-card-text first">Code</p>
+</li>
+<li><p class="sd-card-text first">Notes</p>
+</li>
+<li><p class="sd-card-text first">Method</p>
+</li>
+<li><p class="sd-card-text first">Presentations</p>
+</li>
+<li><p class="sd-card-text first">Teaching</p>
+</li>
+<li><p class="sd-card-text first">…</p>
+</li>
+</ul>
+<p class="sd-card-text">Stored, versioned, citable (via <code class="docutils literal notranslate"><span class="pre">DOI</span></code>) and embebeded into a prebuild web-site wich gives you the abillity to link all this content together. This promote an <strong> open, transparent and lifelong peer review </strong>process with a content that can be adapted to fit multiple audiences.</p>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h4><strong>The scientific community</strong></h4>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text">This website provide a <span class="hovertext" data-hover="Definition">hub</span> for scientists of all fields, interested in the same research question to provide their inputs. Powerfull tool to promote colaboration between interdisciplinary researcher. I think all together we can write science collaboratively, in an <strong> Encyclopaedia 2.0 </strong>. How ? On this web-site you can:</p>
+<ul class="simple">
+<li><p class="sd-card-text first"><strong>Review</strong>: Wether you are a peer, a student or everything in between, you can comment and review this work using <code class="docutils literal notranslate"><span class="pre">hypothesis</span></code> (the three buttons on the right hand corner).
+<br>
+<br></p>
+</li>
+<li><p class="sd-card-text first"><strong>Comment</strong>: More general comment at the bottom of the page
+<br>
+<br></p>
+</li>
+<li><p class="sd-card-text first"><strong>Contribute</strong>: Writing articles within the existing content (work in progress)</p>
+</li>
+</ul>
+<p class="sd-card-text"><strong>Participate</strong> and create your own profile</p>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h4><strong>Peoples</strong></h4>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<ul class="simple">
+<li><p class="sd-card-text first">Access to cutting edge science</p>
+</li>
+<li><p class="sd-card-text first">New education method</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dropdown admonition">
+<p class="first admonition-title">Et vous aussi les potes! <img alt="flag alt &gt;" src="Introduction/Open/_static/SVG_icons/dark-dialogue-bubble-svgrepo-com.svg" /> - <img alt="flag alt &gt;" src="Introduction/Open/_static/SVG_icons/flag-for-flag-france-svgrepo-com.svg" /></p>
+<p class="last">Desole, la majorite du contenu est en anglais, accessibilite exige! Cependant, je pense a vous, et si vous avez la curiosite de vous lancer dans une exploration de ce site, je suis pret a vous accompagner. Suivez ces <code class="docutils literal notranslate"><span class="pre">admonitions</span></code> et tout devrai bien se passer.</p>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="comments">
+<h1>Comments<a class="headerlink" href="#comments" title="Permalink to this heading">#</a></h1>
+<hr class="docutils" />
+<br>
+<div class="full-width docutils">
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 docutils">
+<div class="sd-col sd-d-flex-row sd-col-5 sd-col-xs-5 sd-col-sm-5 sd-col-md-5 sd-col-lg-5 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header bg-light docutils">
+<p class="sd-card-text"><strong>Notes</strong></p>
+</div>
+<div class="sd-card-body docutils">
+<br>
+<blockquote class="trello-card">
+<a href="https://trello.com/c/jI8hHPZX/28-open-source-ecocystem">Trello Card</a>
+</blockquote>
+<script src="https://p.trellocdn.com/embed.min.js"></script>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header bg-light docutils">
+<p class="sd-card-text"><strong>Page</strong></p>
+</div>
+<div class="sd-card-body docutils">
+<br>
+<ul class="simple">
+<li><p class="sd-card-text first">Author:  Vincent Deguin;</p>
+</li>
+<li><p class="sd-card-text first">Status:  <img alt="flag alt &gt;" src="Introduction/_static/Svg_icons/Under_construction.svg" />  <span class="hovertext" data-hover="To be Reviewed">🔎</span></p>
+</li>
+<li><p class="sd-card-text first">Reviewed: <span class="hovertext" data-hover="Insert here who has done what">❌</span></p>
+</li>
+<li><p class="sd-card-text first">Updated: 28/05/2023</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-col-3 sd-col-xs-3 sd-col-sm-3 sd-col-md-3 sd-col-lg-3 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header bg-light docutils">
+<p class="sd-card-text"><span style="float: right"><img alt="flag alt &gt;" src="Introduction/_static/Svg_icons/coins-money-svgrepo-com.svg" /></span><strong>Help</strong></p>
+</div>
+<div class="sd-card-body docutils">
+<br>
+<script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Buy me a coffee', '#317315', 'O4O6EZO78');kofiwidget2.draw();</script> 
+<br>
+<br>
+<p class="sd-card-text">or</p>
+<br>
+<p class="sd-card-text"><img alt="flag alt &gt;" src="Introduction/_static/Svg_icons/patreon-svgrepo-com.svg" /> <a class="reference external" href="https://www.patreon.com/Science_for_the_People" rel="noopener noreferrer" target="_blank">Patreon</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="https://utteranc.es/client.js"
+        repo="Deugz/nb-tools"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Introduction\Open\OpenScience"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../Open_Main.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Open</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../OpenSource/Opensource.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Open Source Tools</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Open Science Ecocystem</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strong-u-open-science-u-strong"><strong> ‣ <u> Open Science </u></strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strong-u-good-guides-u-strong"><strong> ‣ <u> Good Guides </u></strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#strong-the-turing-way-strong"><strong> ‣ ‣ The Turing Way </strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tools">Tools</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strong-u-open-science-tools-u-strong"><strong> ‣ <u> Open Science Tools </u></strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisation">Visualisation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#edition">Edition</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wiki">Wiki</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#poster-presentation">Poster presentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#timelines">Timelines</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hosting">Hosting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#github">Github</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rohub">Rohub</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#more">More</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-by-step-guide-creator">Step by step guide creator</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#education-websites">Education websites</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#as-far-as-i-am-concerned">As far as I am concerned</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-others">For others</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other-tools-on-the-market">Other tools on the market</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#citizen-science-programs">Citizen Science programs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other-cool-scientific-web-sites">Other cool Scientific web-sites</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#science">Science</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#coding">Coding</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coups-de-perso">Coups de 💖 perso</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-science">Open Science</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#comments">Comments</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By <strong>Vincent Deguin</strong> (with ❤️)
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

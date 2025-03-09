@@ -1,0 +1,1020 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Existants &#8212; Tools</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom_style.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/.ipynb_checkpoints/custom_style-checkpoint.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "https://github.com/Deugz/nb-tools");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Introduction/Environement-Travail/Outils/Existants';</script>
+    <link rel="canonical" href="https://deugz.github.io/nb-tools/_build/html/Introduction/Environement-Travail/Outils/Existants.html" />
+    <link rel="shortcut icon" href="../../../_static/tools-screwdriver-svgrepo-com.svg"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Outils" href="Outils.html" />
+    <link rel="prev" title="Mes choix" href="My-Stack.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/tools-screwdriver-svgrepo-com.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../../_static/tools-screwdriver-svgrepo-com.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://deugz.github.io/Encyclopedia-Home/build/html/index.html" title="Home" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-house"></i></span>
+            <label class="sr-only">Home</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://deugz.github.io/nb-profile/_build/html/intro.html" title="Profile" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-user"></i></span>
+            <label class="sr-only">Profile</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://deugz.github.io/ab-blog/_website/index.html" title="Blog" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-blog"></i></span>
+            <label class="sr-only">Blog</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://deugz.github.io/nb-tools/_build/html/intro.html" title="Tools" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-screwdriver-wrench"></i></span>
+            <label class="sr-only">Tools</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://deugz.github.io" title="Forum" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-comments"></i></span>
+            <label class="sr-only">Forum</label></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../to-include.html">To include</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Avant de commencer</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Intro.html">Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Objectifs.html">Objectifs</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../Environment.html">Environement de Travail</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Markdown/Markdown.html">Markdown</a></li>
+
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Open/Open_Main.html">Open</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Open/OpenScience/Open_Science.html">Open Science Ecocystem</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="../Open/OpenSource/Opensource.html">Open Source Tools</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="My-Stack.html"><strong>Mes choix</strong></a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3 current active"><a class="current reference internal" href="#"><strong>Existants</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Outils.html">Outils</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Metier/Application-metier.html">Applications Métiers</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Metier/DLM/DLM.html">Digital Learning Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Metier/Concepteur-UI/Concepteur.html">Concepteur Designer UI</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">📂 Organiser</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../Organiser/Planifier/Planifier.html">Planifier</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../Organiser/Veille/Veille-main.html">Veille</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../Organiser/Veille/Info/Veille-info.html">Informationnel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Organiser/Veille/Techno/Veille-techno.html">Technologique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Organiser/Veille/Concu/Veille-concu.html">Concurrentiel</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../Organiser/Tableau-blanc/Orga-Test.html">Tableau Blanc</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../Organiser/Tableau-blanc/Miro.html">Miro</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">🎨 Créer</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../Creer/Executable-Book/Executable-Book.html">Executable Books</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../Creer/Executable-Book/Jupyter.html">Jupyter Book</a></li>
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../Creer/Dessin-vectoriel/DV-Main.html">Dessin Vectoriel</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../Creer/Dessin-vectoriel/Inkscape.html">Inkscape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Creer/Dessin-vectoriel/Illustrator/Illustrator.html">Illustrator</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../Creer/E-Learning/E-learning-main.html">Modules E-Learning</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../Creer/E-Learning/Storyline.html">Storyline</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../../Creer/E-Learning/Genially.html">Genially</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../Creer/Video/Video-main.html">Vidéo &amp; Animation</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../Creer/Video/Vyond/Vyond-test.html">Vyond</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../Creer/Web-sites/web-site-main.html">Sites Web</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../Creer/Web-sites/Wordpress/Wordpress.html">Wordpress</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">⚡ Animer</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../Animer/Presentation/Support-Pres.html">Support de Présentation</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../Animer/Presentation/Canva/Canva.html">Canva</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../Animer/Soft-skills/Soft-skills.html">Soft Skills</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../Animer/Soft-skills/CNV/CNV.html">Com Non Viloente</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../Animer/Classe-virtuel/Class-Virtuelle.html">Classe Virtuelle</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../Animer/Classe-virtuel/Tests/Klaxoon.html">Klaxoon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Animer/Classe-virtuel/Tests/Digiscreen.html">Digiscreen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Animer/Communaute/Communaut%C3%A9-main.html">Communauté Apprenants</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">🔍 Analyser</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../Analyser/Python/Python-main.html">Python</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">📦 Heberger</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../H%C3%A9berger/Github/Github_I.html">Github I</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">🔗 Connecter</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../Connecter/API/api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Connecter/SemanticWeb/SemanticWeb.html">Semantic Web</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">🤝 Collaborer</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../Collaborer/Collaborer-Main.html">Collaborer</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">and more</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../Design.html">Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../AI.html">AI Tools</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../Biblio/bibliography.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/Introduction/Environement-Travail/Outils/Existants.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Existants</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#static-site-generator">Static Site Generator</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#popularity">Popularity</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wiki">Wiki</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mediawiki">MediaWiki</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tiddlywiki">TiddlyWiki</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#note-taking-tools">Note-taking Tools</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notion">Notion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#evernote">Evernote</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#onenote">OneNote</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#obsidian">Obsidian</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#roam-research">Roam Research</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ai-assistants">AI Assistants</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tana">Tana</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#collaborative-workspace">Collaborative workspace</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#knowledge-base">Knowledge Base</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publications">Publications</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#curvenote">Curvenote</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#more">More</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="existants">
+<h1><strong>Existants</strong><a class="headerlink" href="#existants" title="Permalink to this heading">#</a></h1>
+<blockquote>
+<div>Avant de vous expliquer mon projet, j’aimerai que l’on jette un oeil a ce qui existe déja. Pour chacun des outils que je vais vous présenter nous allons évaluer ces derniers selon plusieurs critères (cf dropdown ci-dessous):</div></blockquote>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Tests / Infos<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+Description</label><div class="sd-tab-content docutils">
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+Notes</label><div class="sd-tab-content docutils">
+<ul class="simple">
+<li><p class="sd-card-text first"><strong>Facilité d’utilisation</strong>: Assurez-vous que la plateforme est conviviale et que vous pouvez rapidement comprendre comment ajouter, éditer et organiser du contenu.</p>
+</li>
+<li><p class="sd-card-text first"><strong>Structure et Organisation</strong> : Recherchez une plateforme qui vous permet de structurer et d’organiser l’information de manière logique et cohérente, en utilisant des catégories, des balises, des liens et d’autres outils de navigation.</p>
+</li>
+<li><p class="sd-card-text first"><strong>Accessibilité et Portabilité</strong> : Vérifiez si vous pouvez accéder à votre base de connaissances à partir de différents appareils (ordinateurs, tablettes, smartphones) et si vous pouvez exporter vos données au besoin.</p>
+</li>
+<li><p class="sd-card-text first"><strong>Collaboration</strong> : Si vous prévoyez de collaborer avec d’autres utilisateurs, assurez-vous que la plateforme prend en charge des fonctionnalités de collaboration telles que la possibilité de travailler en équipe sur le même projet.</p>
+</li>
+<li><p class="sd-card-text first"><strong>Recherche</strong> : Vérifiez si la plateforme offre des capacités de recherche avancées pour vous permettre de trouver rapidement des informations au sein de votre base de connaissances.</p>
+</li>
+<li><p class="sd-card-text first"><strong>Personnalisation</strong> : Recherchez des options de personnalisation, telles que la possibilité de modifier le thème, d’ajouter des extensions ou des plugins, et de personnaliser la structure de la base de connaissances.</p>
+</li>
+<li><p class="sd-card-text first"><strong>Intégrations</strong> : Assurez-vous que la plateforme peut s’intégrer à d’autres outils et services que vous utilisez, par exemple, l’intégration avec d’autres applications de prise de notes, de gestion de tâches ou de stockage en ligne.</p>
+</li>
+<li><p class="sd-card-text first"><strong>Sécurité et Confidentialité</strong> : Si vous traitez des informations sensibles, assurez-vous que la plateforme offre des options de sécurité et de confidentialité appropriées.</p>
+</li>
+<li><p class="sd-card-text first"><strong>Évolutivité</strong> : Si vous prévoyez de faire croître votre base de connaissances au fil du temps, choisissez une plateforme qui peut évoluer avec vos besoins.</p>
+</li>
+<li><p class="sd-card-text first"><strong>Coût</strong> : Évaluez le coût de la plateforme, y compris les abonnements, les licences, ou les coûts liés à l’hébergement si vous optez pour une solution auto-hébergée.</p>
+</li>
+<li><p class="sd-card-text first"><strong>Communauté et Support</strong> : Une communauté active d’utilisateurs et un bon support technique peuvent être précieux pour résoudre des problèmes et partager des conseils.</p>
+</li>
+<li><p class="sd-card-text first"><strong>Intuitivité et Flexibilité</strong> : Recherchez une plateforme qui correspond à votre style de travail et à la manière dont vous préférez organiser les informations.</p>
+</li>
+<li><p class="sd-card-text first"><strong>Sauvegarde et Restauration</strong> : Assurez-vous que la plateforme propose des mécanismes de sauvegarde et de restauration pour éviter la perte de données.</p>
+</li>
+</ul>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+Options</label><div class="sd-tab-content docutils">
+<p class="sd-card-text">list (ce que j’aime bien et moins)</p>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
+Opinion</label><div class="sd-tab-content docutils">
+</div>
+<input id="sd-tab-item-4" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
+Plus d’Infos</label><div class="sd-tab-content docutils">
+<ul class="simple">
+<li><p class="sd-card-text first"><a class="reference external" href="https://www.mediawiki.org/wiki/Wikimedia_Research/Showcase" rel="noopener noreferrer" target="_blank">Research Showcase</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</details><div class="section" id="static-site-generator">
+<h2>Static Site Generator<a class="headerlink" href="#static-site-generator" title="Permalink to this heading">#</a></h2>
+<div class="section" id="popularity">
+<h3>Popularity<a class="headerlink" href="#popularity" title="Permalink to this heading">#</a></h3>
+<p>Application produced by …</p>
+<iframe src="https://ssg-dataset.streamlit.app/?embed=true" height="600" width="100%" style={{ width: "100%", border: "none" }}
+></iframe>
+</div>
+</div>
+<div class="section" id="wiki">
+<h2>Wiki<a class="headerlink" href="#wiki" title="Permalink to this heading">#</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Definition d’un wiki</p>
+</div>
+<div class="section" id="mediawiki">
+<h3>MediaWiki<a class="headerlink" href="#mediawiki" title="Permalink to this heading">#</a></h3>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row docutils">
+<div class="sd-col sd-d-flex-row sd-col-3 sd-col-xs-3 sd-col-sm-3 sd-col-md-3 sd-col-lg-3 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-header bg-light docutils">
+<p class="sd-card-text"><strong>MediaWiki</strong></p>
+</div>
+<div class="sd-card-body docutils">
+<img alt="../../../_images/Mediawiki_logo_icon.svg" src="../../../_images/Mediawiki_logo_icon.svg" /></div>
+<a class="sd-stretched-link reference external" href="https://www.mediawiki.org/wiki/MediaWiki" rel="noopener noreferrer" target="_blank"></a></div>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-9 sd-col-xs-9 sd-col-sm-9 sd-col-md-9 sd-col-lg-9 docutils">
+MediaWiki est la plateforme logicielle sur laquelle Wikipedia est construite. Vous pouvez télécharger et installer MediaWiki pour créer votre propre encyclopédie, que ce soit à des fins personnelles, éducatives ou professionnelles.</div>
+</div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Tests / Infos<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-5" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-5">
+Description</label><div class="sd-tab-content docutils">
+<p class="sd-card-text">Test non réalisé</p>
+</div>
+<input id="sd-tab-item-6" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-6">
+Notes</label><div class="sd-tab-content docutils">
+<ul class="simple">
+<li><p class="sd-card-text first"><strong>Facilité d’utilisation</strong>:</p>
+</li>
+<li><p class="sd-card-text first"><strong>Structure et Organisation</strong> :</p>
+</li>
+<li><p class="sd-card-text first"><strong>Accessibilité et Portabilité</strong> :</p>
+</li>
+<li><p class="sd-card-text first"><strong>Collaboration</strong> :</p>
+</li>
+<li><p class="sd-card-text first"><strong>Recherche</strong> :</p>
+</li>
+<li><p class="sd-card-text first"><strong>Personnalisation</strong> :</p>
+</li>
+<li><p class="sd-card-text first"><strong>Intégrations</strong> :</p>
+</li>
+<li><p class="sd-card-text first"><strong>Sécurité et Confidentialité</strong> :</p>
+</li>
+<li><p class="sd-card-text first"><strong>Évolutivité</strong> :</p>
+</li>
+<li><p class="sd-card-text first"><strong>Coût</strong> :</p>
+</li>
+<li><p class="sd-card-text first"><strong>Communauté et Support</strong> :</p>
+</li>
+<li><p class="sd-card-text first"><strong>Intuitivité et Flexibilité</strong> :</p>
+</li>
+<li><p class="sd-card-text first"><strong>Sauvegarde et Restauration</strong> :</p>
+</li>
+</ul>
+</div>
+<input id="sd-tab-item-7" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-7">
+Options</label><div class="sd-tab-content docutils">
+<p class="sd-card-text">list (ce que j’aime bien et moins)</p>
+</div>
+<input id="sd-tab-item-8" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-8">
+Opinion</label><div class="sd-tab-content docutils">
+</div>
+<input id="sd-tab-item-9" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-9">
+Plus d’Infos</label><div class="sd-tab-content docutils">
+<ul class="simple">
+<li><p class="sd-card-text first"><a class="reference external" href="https://www.mediawiki.org/wiki/Wikimedia_Research/Showcase" rel="noopener noreferrer" target="_blank">Research Showcase</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</details></div>
+<div class="section" id="tiddlywiki">
+<h3>TiddlyWiki<a class="headerlink" href="#tiddlywiki" title="Permalink to this heading">#</a></h3>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row docutils">
+<div class="sd-col sd-d-flex-row sd-col-3 sd-col-xs-3 sd-col-sm-3 sd-col-md-3 sd-col-lg-3 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-header bg-light docutils">
+<p class="sd-card-text"><strong>TiddlyWiki</strong></p>
+</div>
+<div class="sd-card-body docutils">
+<img alt="../../../_images/Motovun_Jack.svg" src="../../../_images/Motovun_Jack.svg" /></div>
+<a class="sd-stretched-link reference external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank"></a></div>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-9 sd-col-xs-9 sd-col-sm-9 sd-col-md-9 sd-col-lg-9 docutils">
+TiddlyWiki est un outil de wiki personnel qui vous permet de créer votre propre base de connaissances interconnectée. Il est basé sur des fichiers HTML que vous pouvez stocker localement ou en ligne.</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="note-taking-tools">
+<h2>Note-taking Tools<a class="headerlink" href="#note-taking-tools" title="Permalink to this heading">#</a></h2>
+<div class="section" id="notion">
+<h3>Notion<a class="headerlink" href="#notion" title="Permalink to this heading">#</a></h3>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row docutils">
+<div class="sd-col sd-d-flex-row sd-col-3 sd-col-xs-3 sd-col-sm-3 sd-col-md-3 sd-col-lg-3 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-header bg-light docutils">
+<p class="sd-card-text"><strong>Notion</strong></p>
+</div>
+<div class="sd-card-body docutils">
+<img alt="../../../_images/Notion-logo.svg" src="../../../_images/Notion-logo.svg" /></div>
+<a class="sd-stretched-link reference external" href="https://www.notion.so/fr-fr" rel="noopener noreferrer" target="_blank"></a></div>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-9 sd-col-xs-9 sd-col-sm-9 sd-col-md-9 sd-col-lg-9 docutils">
+Notion est une application de gestion des connaissances qui vous permet de créer des bases de données, des pages de contenu et d’organiser des informations de manière structurée.</div>
+</div>
+</div>
+</div>
+<div class="section" id="evernote">
+<h3>Evernote<a class="headerlink" href="#evernote" title="Permalink to this heading">#</a></h3>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row docutils">
+<div class="sd-col sd-d-flex-row sd-col-3 sd-col-xs-3 sd-col-sm-3 sd-col-md-3 sd-col-lg-3 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-header bg-light docutils">
+<p class="sd-card-text"><strong>Evernote</strong></p>
+</div>
+<div class="sd-card-body docutils">
+<img alt="../../../_images/Docs" src="../../../_images/Docs" />
+</div>
+<a class="sd-stretched-link reference external" href="https://evernote.com/fr-fr" rel="noopener noreferrer" target="_blank"></a></div>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-9 sd-col-xs-9 sd-col-sm-9 sd-col-md-9 sd-col-lg-9 docutils">
+Bien qu’Evernote soit principalement un outil de prise de notes, il peut également être utilisé pour créer une base de connaissances personnelle en organisant vos notes de manière structurée.</div>
+</div>
+</div>
+</div>
+<div class="section" id="onenote">
+<h3>OneNote<a class="headerlink" href="#onenote" title="Permalink to this heading">#</a></h3>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row docutils">
+<div class="sd-col sd-d-flex-row sd-col-3 sd-col-xs-3 sd-col-sm-3 sd-col-md-3 sd-col-lg-3 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-header bg-light docutils">
+<p class="sd-card-text"><strong>OneNote</strong></p>
+</div>
+<div class="sd-card-body docutils">
+<img alt="../../../_images/Docs" src="../../../_images/Docs" />
+</div>
+<a class="sd-stretched-link reference external" href="https://www.onenote.com" rel="noopener noreferrer" target="_blank"></a></div>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-9 sd-col-xs-9 sd-col-sm-9 sd-col-md-9 sd-col-lg-9 docutils">
+OneNote, de Microsoft, est un autre outil de prise de notes qui vous permet d’organiser vos informations sous forme de carnets de notes.</div>
+</div>
+</div>
+</div>
+<div class="section" id="obsidian">
+<h3>Obsidian<a class="headerlink" href="#obsidian" title="Permalink to this heading">#</a></h3>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row docutils">
+<div class="sd-col sd-d-flex-row sd-col-3 sd-col-xs-3 sd-col-sm-3 sd-col-md-3 sd-col-lg-3 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-header bg-light docutils">
+<p class="sd-card-text"><strong>Obsidian</strong></p>
+</div>
+<div class="sd-card-body docutils">
+<img alt="../../../_images/2023_Obsidian_logo.svg" src="../../../_images/2023_Obsidian_logo.svg" /></div>
+<a class="sd-stretched-link reference external" href="https://obsidian.md/" rel="noopener noreferrer" target="_blank"></a></div>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-9 sd-col-xs-9 sd-col-sm-9 sd-col-md-9 sd-col-lg-9 docutils">
+Obsidian est une application de prise de notes qui permet de créer des liens entre les notes, ce qui en fait un outil puissant pour organiser des connaissances interconnectées.</div>
+</div>
+</div>
+</div>
+<div class="section" id="roam-research">
+<h3>Roam Research<a class="headerlink" href="#roam-research" title="Permalink to this heading">#</a></h3>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row docutils">
+<div class="sd-col sd-d-flex-row sd-col-3 sd-col-xs-3 sd-col-sm-3 sd-col-md-3 sd-col-lg-3 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-header bg-light docutils">
+<p class="sd-card-text"><strong>Roam</strong></p>
+</div>
+<div class="sd-card-body docutils">
+<img alt="../../../_images/Docs" src="../../../_images/Docs" />
+</div>
+<a class="sd-stretched-link reference external" href="https://roamresearch.com/" rel="noopener noreferrer" target="_blank"></a></div>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-9 sd-col-xs-9 sd-col-sm-9 sd-col-md-9 sd-col-lg-9 docutils">
+Roam Research est une autre application de prise de notes conçue pour organiser des connaissances et des informations de manière non linéaire.</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ai-assistants">
+<h2>AI Assistants<a class="headerlink" href="#ai-assistants" title="Permalink to this heading">#</a></h2>
+<p>L’intelligence Artificielle …</p>
+<div class="section" id="tana">
+<h3>Tana<a class="headerlink" href="#tana" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://tana.inc/tana-publish" rel="noopener noreferrer" target="_blank">Link</a></li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Only early access for now (applied for early access)</p>
+<ul class="last simple">
+<li>Can be quite cool</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="collaborative-workspace">
+<h2>Collaborative workspace<a class="headerlink" href="#collaborative-workspace" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://coda.io/" rel="noopener noreferrer" target="_blank">Coda</a></li>
+<li><a class="reference external" href="https://www.atlassian.com/fr/software/confluence" rel="noopener noreferrer" target="_blank">Confluence</a></li>
+<li><a class="reference external" href="https://www.loomio.com/" rel="noopener noreferrer" target="_blank">Loomio</a></li>
+</ul>
+</div>
+<div class="section" id="knowledge-base">
+<h2>Knowledge Base<a class="headerlink" href="#knowledge-base" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://logseq.com/" rel="noopener noreferrer" target="_blank">Logseq</a></li>
+</ul>
+</div>
+<div class="section" id="publications">
+<h2>Publications<a class="headerlink" href="#publications" title="Permalink to this heading">#</a></h2>
+<div class="section" id="curvenote">
+<h3>Curvenote<a class="headerlink" href="#curvenote" title="Permalink to this heading">#</a></h3>
+</div>
+</div>
+<div class="section" id="more">
+<h2>More<a class="headerlink" href="#more" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li>Slack (Communication)</li>
+<li><a class="reference external" href="https://workflowy.com/" rel="noopener noreferrer" target="_blank">Workflowy</a></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Introduction\Environement-Travail\Outils"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="My-Stack.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><strong>Mes choix</strong></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Outils.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Outils</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#static-site-generator">Static Site Generator</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#popularity">Popularity</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wiki">Wiki</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mediawiki">MediaWiki</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tiddlywiki">TiddlyWiki</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#note-taking-tools">Note-taking Tools</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notion">Notion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#evernote">Evernote</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#onenote">OneNote</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#obsidian">Obsidian</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#roam-research">Roam Research</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ai-assistants">AI Assistants</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tana">Tana</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#collaborative-workspace">Collaborative workspace</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#knowledge-base">Knowledge Base</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publications">Publications</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#curvenote">Curvenote</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#more">More</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By <strong>Vincent Deguin</strong> (with ❤️)
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

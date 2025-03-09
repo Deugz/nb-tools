@@ -4,31 +4,95 @@
 format: jb-book
 root: intro
 parts:
-  - caption: 🔓 Open
+  - caption: ""
     chapters:
-    - file: OpenScience/Open_Science
-    - file: OpenSource/Opensource
-      sections:
-      - file: OpenSource/Anaconda/Anaconda_JB
-      - file: OpenSource/More/Inkscape    
-  - caption: 🌎 Online
+    - file: to-include
+  - caption: Avant de commencer
     chapters:
-    - file: Markdown/Markdown
-    - file: Executable-Book/Executable-Book
+    - file: Introduction/Intro
       sections:
-      - file: Executable-Book/Jupyter
-      - file: Executable-Book/MyST
-    - file: Github/Github_I
+      - file: Introduction/Objectifs
+    - file: Introduction/Environement-Travail/Environment
+      sections:
+      - file: Introduction/Environement-Travail/Markdown/Markdown    
+      - file: Introduction/Environement-Travail/Open/Open_Main
+        sections:
+        - file: Introduction/Environement-Travail/Open/OpenScience/Open_Science
+        - file: Introduction/Environement-Travail/Open/OpenSource/Opensource
+      - file: Introduction/Environement-Travail/Outils/My-Stack
+        sections:
+        - file: Introduction/Environement-Travail/Outils/Existants
+        - file: Introduction/Environement-Travail/Outils/Outils
+    - file: Introduction/Metier/Application-metier
+      sections:
+      - file: Introduction/Metier/DLM/DLM
+      - file: Introduction/Metier/Concepteur-UI/Concepteur
+  - caption: 📂 Organiser
+    chapters:
+    - file: Organiser/Planifier/Planifier
+    - file: Organiser/Veille/Veille-main
+      sections:
+      - file: Organiser/Veille/Info/Veille-info
+      - file: Organiser/Veille/Techno/Veille-techno
+      - file: Organiser/Veille/Concu/Veille-concu      
+    - file: Organiser/Tableau-blanc/Orga-Test
+      sections:
+      - file: Organiser/Tableau-blanc/Miro
+  - caption: 🎨 Créer
+    chapters:
+    - file: Creer/Executable-Book/Executable-Book
+      sections:
+      - file: Creer/Executable-Book/Jupyter
+    - file: Creer/Dessin-vectoriel/DV-Main
+      sections:
+      - file: Creer/Dessin-vectoriel/Inkscape
+      - file: Creer/Dessin-vectoriel/Illustrator/Illustrator
+    - file: Creer/E-Learning/E-learning-main
+      sections:
+      - file: Creer/E-Learning/Storyline
+      - file: Creer/E-Learning/Genially
+    - file: Creer/Video/Video-main
+      sections:
+      - file: Creer/Video/Vyond/Vyond-test
+    - file: Creer/Web-sites/web-site-main
+      sections:
+      - file: Creer/Web-sites/Wordpress/Wordpress
+  - caption: ⚡ Animer
+    chapters:
+    - file: Animer/Presentation/Support-Pres
+      sections:
+      - file: Animer/Presentation/Canva/Canva
+      - file: Animer/Presentation/Gamma/Gamma
+    - file: Animer/Soft-skills/Soft-skills
+      sections:
+      - file: Animer/Soft-skills/CNV/CNV
+    - file: Animer/Classe-virtuel/Class-Virtuelle
+      sections:
+      - file: Animer/Classe-virtuel/Tests/Klaxoon
+      - file: Animer/Classe-virtuel/Tests/Digiscreen
+    - file: Animer/Communaute/Communauté-main
+  - caption: 🔍 Analyser
+    chapters:
+    - file: Analyser/Python/Python-main
+  - caption: 📦 Heberger
+    chapters:
+    - file: Héberger/Github/Github_I
     - file: Web-sites/Analytics
+    - file: API/api
+    - file: Web-sites/RSS
+  - caption: 🔗 Connecter
+    chapters:
+    - file: Connecter/API/api
+    - file: Connecter/SemanticWeb/SemanticWeb
+  - caption: 🤝 Collaborer
+    chapters:
+    - file: Collaborer/Collaborer-Main
   - caption: 🚀 Interactif
     chapters:
     - file: Binder/Binder_JB
   - caption: 👥 Collaboratif
     chapters:
     - file: Github/Github_II
-  - caption: 👀 Visible
-    chapters:
-    - file: SemanticWeb/SemanticWeb
   - caption: and more
     chapters:
     - file: Design

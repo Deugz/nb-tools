@@ -1,0 +1,1243 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semantic Web &#8212; Tools</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom_style.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/.ipynb_checkpoints/custom_style-checkpoint.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "https://github.com/Deugz/nb-tools");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Connecter/SemanticWeb/SemanticWeb';</script>
+    <link rel="canonical" href="https://deugz.github.io/nb-tools/_build/html/Connecter/SemanticWeb/SemanticWeb.html" />
+    <link rel="shortcut icon" href="../../_static/tools-screwdriver-svgrepo-com.svg"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Collaborer" href="../../Collaborer/Collaborer-Main.html" />
+    <link rel="prev" title="API" href="../API/api.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/tools-screwdriver-svgrepo-com.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/tools-screwdriver-svgrepo-com.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://deugz.github.io/Encyclopedia-Home/build/html/index.html" title="Home" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-house"></i></span>
+            <label class="sr-only">Home</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://deugz.github.io/nb-profile/_build/html/intro.html" title="Profile" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-user"></i></span>
+            <label class="sr-only">Profile</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://deugz.github.io/ab-blog/_website/index.html" title="Blog" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-blog"></i></span>
+            <label class="sr-only">Blog</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://deugz.github.io/nb-tools/_build/html/intro.html" title="Tools" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-screwdriver-wrench"></i></span>
+            <label class="sr-only">Tools</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://deugz.github.io" title="Forum" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-comments"></i></span>
+            <label class="sr-only">Forum</label></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../to-include.html">To include</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Avant de commencer</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Introduction/Intro.html">Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Introduction/Objectifs.html">Objectifs</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Introduction/Outils/Outils.html">Outils</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Introduction/Outils/Existants.html"><strong>Existants</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Introduction/Outils/My-Stack.html"><strong>Mes choix</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Introduction/Environment.html">Le Guide</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Introduction/Markdown/Markdown.html">Markdown</a></li>
+
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../Introduction/Open/Open_Main.html">Open</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Introduction/Open/OpenScience/Open_Science.html">Open Science Ecocystem</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="../../Introduction/Open/OpenSource/Opensource.html">Open Source Tools</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">📂 Organiser</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Organiser/Organiser.html">Panorama</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Organiser/Veille/Veille-main.html">Veille</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Organiser/Veille/Info/Veille-info.html">Informationnel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Organiser/Veille/Techno/Veille-techno.html">Technologique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Organiser/Veille/Concu/Veille-concu.html">Concurrentiel</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Organiser/Tableau-blanc/Orga-Test.html">Tableau Blanc</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Organiser/Tableau-blanc/Miro.html">Miro</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">🎨 Créer</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Creer/Executable-Book/Executable-Book.html">Executable Books</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Creer/Executable-Book/Jupyter.html">Jupyter Book</a></li>
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Creer/Dessin-vectoriel/DV-Main.html">Dessin Vectoriel</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Creer/Dessin-vectoriel/Inkscape.html">Inkscape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Creer/Dessin-vectoriel/Illustrator/Illustrator.html">Illustrator</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Creer/E-Learning/E-learning-main.html">Modules E-Learning</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Creer/E-Learning/Storyline.html">Storyline</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../Creer/E-Learning/Genially.html">Genially</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Creer/Video/Video-main.html">Vidéo &amp; Animation</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Creer/Video/Vyond/Vyond-test.html">Vyond</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">⚡ Animer</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Animer/Soft-skills/Soft-skills.html">Soft Skills</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Animer/Soft-skills/CNV/CNV.html">Com Non Viloente</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Animer/Classe-virtuel/Class-Virtuelle.html">Classe Virtuelle</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Animer/Classe-virtuel/Tests/Klaxoon.html">Klaxoon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Animer/Classe-virtuel/Tests/Digiscreen.html">Digiscreen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Animer/Communaute/Communaut%C3%A9-main.html">Communauté Apprenants</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">🔍 Analyser</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Analyser/Python/Python-main.html">Python</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">📦 Heberger</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../H%C3%A9berger/Github/Github_I.html">Github I</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">🔗 Connecter</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../API/api.html">API</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Semantic Web</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">🔗 Collaborer</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Collaborer/Collaborer-Main.html">Collaborer</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">and more</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Design.html">Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../AI.html">AI Tools</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Biblio/bibliography.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/Connecter/SemanticWeb/SemanticWeb.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Semantic Web</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Semantic Web</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#usefull-information">Usefull information</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#readings">Readings</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#more">More</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#semantic-web-and-executable-books">Semantic Web and Executable books</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strong-u-semantic-web-and-science-u-strong"><strong> ‣ <u> Semantic Web and Science </u></strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#meta-tags-for-html-publication">Meta tags for html publication</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><strong> ‣ <u> Semantic Web and Science </u></strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#strong-example-strong-life-sciences"><strong> ‣ ‣ Example: </strong> Life Sciences</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#strong-example-strong-scidata"><strong> ‣ ‣ Example: </strong> SciData</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#from-raw-html-to-metadata">From RAW HTML To Metadata</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strong-u-microdata-u-strong"><strong> ‣ <u> Microdata </u></strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#strong-example-strong"><strong> ‣ ‣ Example </strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strong-u-scientific-articles-metadata-u-strong"><strong> ‣ <u> Scientific Articles Metadata </u></strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#strong-jats-strong"><strong> ‣ ‣ JATS </strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#from-metadata-in-html-to-rdf">From Metadata in HTML to RDF</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ontologies">Ontologies</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strong-u-definition-u-strong"><strong> ‣ <u> Definition </u></strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strong-u-build-a-simple-ontologie-u-strong"><strong> ‣ <u> Build a simple ontologie </u></strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strong-u-online-tutorials-u-strong"><strong> ‣ <u> Online tutorials </u></strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strong-u-ontology-matching-u-strong"><strong> ‣ <u> Ontology matching </u></strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#to-do">To do</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strong-u-what-do-i-need-to-do-u-strong"><strong> ‣ <u> What do I need to do </u></strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#knowledge-graphs">Knowledge graphs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sitemap">Sitemap</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rss">RSS ?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vrac-links">Vrac links</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#comments">Comments</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="semantic-web">
+<h1>Semantic Web<a class="headerlink" href="#semantic-web" title="Permalink to this heading">#</a></h1>
+<div class="admonition-introduction admonition">
+<p class="first admonition-title">Introduction</p>
+<p class="last">Bien, le web sémantique est un concept qui, il me semble, est toujours en train d’être définit. Nous avons des tags sémantique natifs du html (<section>, <article> etc …), mais si on souhaite aller plus loin dans la description de notre corpus de texte, la cela se complique un peu</p>
+</div>
+<div class="section" id="usefull-information">
+<h2>Usefull information<a class="headerlink" href="#usefull-information" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://www.w3.org/2013/data/" rel="noopener noreferrer" target="_blank">W3C</a></li>
+</ul>
+</div>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<div class="figure align-default" id="id10">
+<img alt="../../_images/Semantic_Web_Stack.png" src="../../_images/Semantic_Web_Stack.png" />
+<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text"><a class="reference external" href="https://commons.wikimedia.org/wiki/File:Semantic_Web_Stack.png#/media/File:Semantic_Web_Stack.png" rel="noopener noreferrer" target="_blank">Source</a></span><a class="headerlink" href="#id10" title="Permalink to this image">#</a></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Use following termonologie to add definitions</p>
+</div>
+<ul class="simple">
+<li><a class="reference external" href="https://search.google.com/test/rich-results" rel="noopener noreferrer" target="_blank">to check</a></li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Rich results from google search</p>
+</div>
+<div class="section" id="readings">
+<h3>Readings<a class="headerlink" href="#readings" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://www.researchgate.net/publication/39994660_A_Framework_for_Web_Science" rel="noopener noreferrer" target="_blank">A_Framework_for_Web_Science</a></li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">To download, read and put in refs</p>
+</div>
+<div class="section" id="more">
+<h4>More<a class="headerlink" href="#more" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><a class="reference external" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4037693" rel="noopener noreferrer" target="_blank">Link</a></li>
+</ul>
+<div class="full-width docutils">
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
+<div class="sd-col sd-d-flex-column sd-col-8 sd-col-xs-8 sd-col-sm-8 sd-col-md-8 sd-col-lg-8 docutils">
+<div class="embedresize">
+<iframe width="100%" height="56.25%" src="https://www.youtube.com/embed/V6BR9DrmUQA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<p><strong>Links</strong></p>
+<ul class="simple">
+<li><a class="reference external" href="https://www.youtube.com/watch?v=nxnaD9WGJiI&amp;list=PL6NlzTkKezhitR1TkfFzy1tC62iES_hJL&amp;index=2" rel="noopener noreferrer" target="_blank">Youtube links</a></li>
+<li><a class="reference external" href="https://schema.org/" rel="noopener noreferrer" target="_blank">Schema.org</a><ul>
+<li><a class="reference external" href="https://schema.org/docs/gs.html" rel="noopener noreferrer" target="_blank">Getting started</a></li>
+</ul>
+</li>
+<li><a class="reference external" href="http://blogspace.com/rdf/SwartzHendler" rel="noopener noreferrer" target="_blank">Swartz article</a></li>
+</ul>
+<p><a class="reference external" href="https://www.w3.org/MarkUp/2009/rdfa-for-html-authors" rel="noopener noreferrer" target="_blank">RDFa for html authors</a></p>
+</div>
+<div class="sd-col sd-d-flex-row sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header bg-light docutils">
+<p class="sd-card-text"><strong>Vocabulary</strong></p>
+</div>
+<div class="sd-card-body docutils">
+<br>
+<ul class="simple">
+<li><p class="sd-card-text first"><span class="hovertext" data-hover="Resource Description Framework">RDF </span>: Data model for metadata</p>
+</li>
+</ul>
+<br>
+<ul class="simple">
+<li><p class="sd-card-text first"><span class="hovertext" data-hover="Def"> XML </span></p>
+</li>
+</ul>
+<br>
+<ul class="simple">
+<li><p class="sd-card-text first"><span class="hovertext" data-hover="Def"> Ontology </span></p>
+</li>
+</ul>
+<br>
+<ul class="simple">
+<li><p class="sd-card-text first"><span class="hovertext" data-hover="Def"> JSON </span></p>
+</li>
+</ul>
+<br>
+<ul class="simple">
+<li><p class="sd-card-text first"><span class="hovertext" data-hover="Def"> Knowledge graph</span></p>
+</li>
+<li><p class="sd-card-text first">JATS: Journal Article Tag Suite <a class="reference external" href="https://jats.nlm.nih.gov/" rel="noopener noreferrer" target="_blank">Source</a> - xml for scientif articles / publications</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="warning admonition">
+<p class="first admonition-title">Questions</p>
+<ul class="simple">
+<li>How does myst metadata translate into html (is it meta tags in head ?)</li>
+<li>Can I add extra metadata within elements  by using block breaks</li>
+</ul>
+<div class="last highlight-markdown notranslate"><div class="highlight"><pre><span></span>+++ {&quot;meta&quot;: &quot;data&quot;}
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="semantic-web-and-executable-books">
+<h3>Semantic Web and Executable books<a class="headerlink" href="#semantic-web-and-executable-books" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://myst-tools.org/docs/mystjs/frontmatter" rel="noopener noreferrer" target="_blank">Frontmatter</a></li>
+</ul>
+</div>
+<div class="section" id="strong-u-semantic-web-and-science-u-strong">
+<h3><strong> ‣ <u> Semantic Web and Science </u></strong><a class="headerlink" href="#strong-u-semantic-web-and-science-u-strong" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://ogp.me/" rel="noopener noreferrer" target="_blank">Open Graph Protocole</a></li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">To investigate because sphinx extension available !! :)</p>
+</div>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/wpilibsuite/sphinxext-opengraph" rel="noopener noreferrer" target="_blank">Sphinx extension</a></li>
+</ul>
+<div class="section" id="meta-tags-for-html-publication">
+<h4>Meta tags for html publication<a class="headerlink" href="#meta-tags-for-html-publication" title="Permalink to this heading">#</a></h4>
+<p>Based on this <a class="reference external" href="http://div.div1.com.au/div-thoughts/div-commentaries/66-div-commentary-metadata#_HTML-meta-standards" rel="noopener noreferrer" target="_blank">page</a></p>
+<ul class="simple">
+<li>Highwire Press/Google Scholar citation</li>
+<li>Dublin Core</li>
+<li>PRISM</li>
+<li>Eprints</li>
+<li>BE Press bepress_</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id1">
+<h3><strong> ‣ <u> Semantic Web and Science </u></strong><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><span id="id2">[<a class="reference internal" href="../../Biblio/bibliography.html#id8" title="Gary H. Merrill. Ontology, ontologies, and science. Topoi, 30:71-83, 4 2011. doi:10.1007/s11245-011-9091-x.">Merrill, 2011</a>]</span></li>
+<li><span id="id3">[<a class="reference internal" href="../../Biblio/bibliography.html#id10" title="Chan jong Im and Do wan Kim. Semi-automatic ontology construction from html documents: a conversion of text-formed information into owl 2. International Journal of Contents, 12:24-30, 6 2016. doi:10.5392/ijoc.2016.12.2.024.">jong Im and wan Kim, 2016</a>]</span></li>
+<li><span id="id4">[<a class="reference internal" href="../../Biblio/bibliography.html#id6">Ruiz-Iniesta and Corcho, 2008</a>]</span></li>
+</ul>
+<p><strong>Softwares</strong></p>
+<ul class="simple">
+<li><span id="id5">[<a class="reference internal" href="../../Biblio/bibliography.html#id5" title="Jorge Calmon de Almeida Biolchini, Paula Gomes Mian, Ana Candida Cruz Natali, Tayana Uchôa Conte, and Guilherme Horta Travassos. Scientific research ontology to support systematic review in software engineering. Advanced Engineering Informatics, 21:133-151, 4 2007. doi:10.1016/j.aei.2006.11.006.">de&nbsp;Almeida&nbsp;Biolchini <em>et al.</em>, 2007</a>]</span></li>
+</ul>
+<div class="section" id="strong-example-strong-life-sciences">
+<h4><strong> ‣ ‣ Example: </strong> Life Sciences<a class="headerlink" href="#strong-example-strong-life-sciences" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><span id="id6">[<a class="reference internal" href="../../Biblio/bibliography.html#id9" title="Giulia Panzarella, Pierangelo Veltri, and Stefano Alcaro. Using ontologies for life science text-based resource organization. Artificial Intelligence in the Life Sciences, 3:100059, 12 2023. doi:10.1016/j.ailsci.2023.100059.">Panzarella <em>et al.</em>, 2023</a>]</span></li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Good example with overview of softwares etc … <strong>To read!</strong></p>
+</div>
+</div>
+<div class="section" id="strong-example-strong-scidata">
+<h4><strong> ‣ ‣ Example: </strong> SciData<a class="headerlink" href="#strong-example-strong-scidata" title="Permalink to this heading">#</a></h4>
+<p>SciData is a data model for scientific data (JSON-LD implementation) that provides a ontologically defined framework for organizing both the data and metadata from scientific experiments, calculations, and theories</p>
+<ul class="simple">
+<li><span id="id7">[<a class="reference internal" href="../../Biblio/bibliography.html#id7" title="Stuart J. Chalk. Scidata: a data model and ontology for semantic representation of scientific data. Journal of Cheminformatics, 10 2016. doi:10.1186/s13321-016-0168-9.">Chalk, 2016</a>]</span></li>
+<li><a class="reference external" href="http://stuchalk.github.io/scidata/" rel="noopener noreferrer" target="_blank">WebSite</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="from-raw-html-to-metadata">
+<h2>From RAW HTML To Metadata<a class="headerlink" href="#from-raw-html-to-metadata" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li>[Simple HTML Ontology Extensions](Simple HTML Ontology Extensions)</li>
+</ul>
+<p>to check: Microformat</p>
+<div class="section" id="strong-u-microdata-u-strong">
+<h3><strong> ‣ <u> Microdata </u></strong><a class="headerlink" href="#strong-u-microdata-u-strong" title="Permalink to this heading">#</a></h3>
+<p>Sometimes, it is desirable to annotate content with specific machine-readable labels, e.g. to allow generic scripts to provide services that are customized to the page, or to enable content from a variety of cooperating authors to be processed by a single script in a consistent manner. For this purpose, authors can use the microdata features described in this section. Microdata allows nested groups of name-value pairs to be added to documents, in parallel with the existing content.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Is it semantic ? Good first step</p>
+<p class="last">Compatible with <a class="reference external" href="https://schema.org/" rel="noopener noreferrer" target="_blank">schema.org</a> ?</p>
+</div>
+<ul class="simple">
+<li><a class="reference external" href="https://html.spec.whatwg.org/multipage/microdata.html#microdata" rel="noopener noreferrer" target="_blank">Info</a></li>
+<li><strong>itemscope</strong></li>
+<li><strong>itemtype</strong></li>
+<li><strong>itemid</strong></li>
+<li><strong>itemprop</strong></li>
+<li><strong>itemref</strong></li>
+<li><strong>datetime</strong></li>
+</ul>
+<p>I don’t really use html tags (ie it is the point of JupyterBook to releive you from using use by building html from markdown files).
+However there is a few exception to this rule:</p>
+<p>To explain complicated words I use <kbd>span</kbd> tags.</p>
+<ul class="simple">
+<li><span class="hovertext" data-hover="Def"> Ontology </span></li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Should I start putting span divs with microdata tags to be able to make my data linkable ?</p>
+<p class="last"><strong>Ask Alessio</strong></p>
+</div>
+<div class="section" id="strong-example-strong">
+<h4><strong> ‣ ‣ Example </strong><a class="headerlink" href="#strong-example-strong" title="Permalink to this heading">#</a></h4>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">itemscope</span> <span class="na">itemtype </span><span class="o">=</span><span class="s">&quot;https://schema.org/Movie&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">itemprop</span><span class="o">=</span><span class="s">&quot;name&quot;</span><span class="p">&gt;</span>Avatar<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">itemprop</span><span class="o">=</span><span class="s">&quot;director&quot;</span> <span class="na">itemscope</span> <span class="na">itemtype</span><span class="o">=</span><span class="s">&quot;https://schema.org/Person&quot;</span><span class="p">&gt;</span>
+  Director: <span class="p">&lt;</span><span class="nt">span</span> <span class="na">itemprop</span><span class="o">=</span><span class="s">&quot;name&quot;</span><span class="p">&gt;</span>James Cameron<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> (born <span class="p">&lt;</span><span class="nt">span</span> <span class="na">itemprop</span><span class="o">=</span><span class="s">&quot;birthDate&quot;</span><span class="p">&gt;</span>August 16, 1954<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>)
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">itemprop</span><span class="o">=</span><span class="s">&quot;genre&quot;</span><span class="p">&gt;</span>Science fiction<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;../movies/avatar-theatrical-trailer.html&quot;</span> <span class="na">itemprop</span><span class="o">=</span><span class="s">&quot;trailer&quot;</span><span class="p">&gt;</span>Trailer<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p class="emphase">Microdata vocabularies do not provide the semantics, or meaning of an item</p>
+<p>use vocabularies available on the web -&gt; <a class="reference external" href="http://Schema.org" rel="noopener noreferrer" target="_blank">Schema.org</a></p>
+</div>
+</div>
+<div class="section" id="strong-u-scientific-articles-metadata-u-strong">
+<h3><strong> ‣ <u> Scientific Articles Metadata </u></strong><a class="headerlink" href="#strong-u-scientific-articles-metadata-u-strong" title="Permalink to this heading">#</a></h3>
+<div class="section" id="strong-jats-strong">
+<h4><strong> ‣ ‣ JATS </strong><a class="headerlink" href="#strong-jats-strong" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li>JATS: Journal Article Tag Suite <a class="reference external" href="https://jats.nlm.nih.gov/" rel="noopener noreferrer" target="_blank">Source</a> - xml for scientif articles / publications</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="from-metadata-in-html-to-rdf">
+<h2>From Metadata in HTML to RDF<a class="headerlink" href="#from-metadata-in-html-to-rdf" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://www.w3.org/2001/sw/RDFCore/20031212-rdfinhtml/" rel="noopener noreferrer" target="_blank">Different approaches</a> - Good but pretty outdated (2001)</li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>My Document<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;meta&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;application/rdf+xml&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;meta.rdf&quot;</span><span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="ontologies">
+<h2>Ontologies<a class="headerlink" href="#ontologies" title="Permalink to this heading">#</a></h2>
+<p><span id="id8">[<a class="reference internal" href="../../Biblio/bibliography.html#id3" title="Kamran Munir and M. Sheraz Anjum. The use of ontologies for effective knowledge modelling and information retrieval. Applied Computing and Informatics, 14:116-126, 7 2018. doi:10.1016/j.aci.2017.07.003.">Munir and Anjum, 2018</a>]</span></p>
+<div class="section" id="strong-u-definition-u-strong">
+<h3><strong> ‣ <u> Definition </u></strong><a class="headerlink" href="#strong-u-definition-u-strong" title="Permalink to this heading">#</a></h3>
+<p><span class="math notranslate nohighlight">\(
+{\displaystyle i=\langle C_{i},R_{i},I_{i},T_{i},V_{i}\rangle }
+\)</span></p>
+<ul class="simple">
+<li>C is the set of classes,</li>
+<li>R is the set of relations,</li>
+<li>I is the set of individuals,</li>
+<li>T is the set of data types,</li>
+<li>V is the set of values,</li>
+</ul>
+<p>Ontologies come in different serialisations, formalisms, and variants For example, their are a 9 different release files associated with an ontology.</p>
+<ul class="simple">
+<li>OWL</li>
+<li>RDF(s)</li>
+<li>OBO</li>
+<li><a class="reference external" href="https://oboacademy.github.io/obook/reference/glossary/" rel="noopener noreferrer" target="_blank">Tools</a></li>
+</ul>
+<p>I would like to:</p>
+<ul class="simple">
+<li>?</li>
+<li><a class="reference external" href="https://enterprise-knowledge.com/from-taxonomy-to-ontology/" rel="noopener noreferrer" target="_blank">Article</a> - from taxonomy to ontology</li>
+</ul>
+</div>
+<div class="section" id="strong-u-build-a-simple-ontologie-u-strong">
+<h3><strong> ‣ <u> Build a simple ontologie </u></strong><a class="headerlink" href="#strong-u-build-a-simple-ontologie-u-strong" title="Permalink to this heading">#</a></h3>
+<div class="full-width docutils">
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 docutils">
+<div class="sd-col sd-d-flex-row sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header bg-light docutils">
+<p class="sd-card-text"><strong>Protégé</strong></p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">Open Source</p>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">Link</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header bg-light docutils">
+<p class="sd-card-text"><strong>WebVOWL</strong></p>
+</div>
+<div class="sd-card-body docutils">
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">Link</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header bg-light docutils">
+<p class="sd-card-text"><strong>Else</strong></p>
+</div>
+<div class="sd-card-body docutils">
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">Link</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><strong>Tutorial serie</strong>:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://www.youtube.com/watch?v=mIh6KY0X4IU&amp;list=PLSXoLBYuvBblPoSVWZHRdMe3XDlUJ2nte&amp;index=4" rel="noopener noreferrer" target="_blank">Youtube_1</a></li>
+</ul>
+<p><strong>Software</strong>: Protege</p>
+<ul class="simple">
+<li>Class / Subclass<ul>
+<li>The different foler / subfolder</li>
+</ul>
+</li>
+<li>Object properties can be given sense by adding **Characteristic<ul>
+<li>isMarkdown</li>
+<li>is Folder</li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Relation from ensemble theory</p>
+<ul class="simple">
+<li>Fuctional</li>
+<li>Transitive</li>
+<li>Symetric</li>
+<li>Reflexive</li>
+</ul>
+<p class="last"><strong>To check</strong></p>
+</div>
+</div>
+<div class="section" id="strong-u-online-tutorials-u-strong">
+<h3><strong> ‣ <u> Online tutorials </u></strong><a class="headerlink" href="#strong-u-online-tutorials-u-strong" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://rml.io/yarrrml/tutorial/getting-started/#existing-data-sources" rel="noopener noreferrer" target="_blank">YARRRML</a></li>
+<li><a class="reference external" href="https://enterprise-knowledge.com/transforming-tabular-data-into-personalized-componentized-content-using-knowledge-graphs-in-python/" rel="noopener noreferrer" target="_blank">From CSV to RDF via python</a></li>
+</ul>
+</div>
+<div class="section" id="strong-u-ontology-matching-u-strong">
+<h3><strong> ‣ <u> Ontology matching </u></strong><a class="headerlink" href="#strong-u-ontology-matching-u-strong" title="Permalink to this heading">#</a></h3>
+<p><span id="id9">[<a class="reference internal" href="../../Biblio/bibliography.html#id4" title="Lorena Otero-Cerdeira, Francisco J. Rodríguez-Martínez, and Alma Gómez-Rodríguez. Ontology matching: a literature review. Expert Systems with Applications, 42:949-971, 2 2015. doi:10.1016/j.eswa.2014.08.032.">Otero-Cerdeira <em>et al.</em>, 2015</a>]</span></p>
+</div>
+</div>
+<div class="section" id="to-do">
+<h2>To do<a class="headerlink" href="#to-do" title="Permalink to this heading">#</a></h2>
+<div class="admonition-to-do admonition">
+<p class="first admonition-title">To do</p>
+<ul class="last simple">
+<li>Think about what is important in the project<ul>
+<li>Define specific type of content within websiteand allocate proper description</li>
+<li>look in <a class="reference external" href="https://schema.org/" rel="noopener noreferrer" target="_blank">Schema.org</a> for specific tag</li>
+</ul>
+</li>
+</ul>
+</div>
+<ul class="simple">
+<li>embed RDF into web-page</li>
+</ul>
+<p><a class="reference external" href="https://json-ld.org/playground/" rel="noopener noreferrer" target="_blank">JSON</a></p>
+<div class="admonition-to-do admonition">
+<p class="first admonition-title">To do</p>
+<ul class="last simple">
+<li>Check how to implement into JupyterBook<ul>
+<li>Github issue ?</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="strong-u-what-do-i-need-to-do-u-strong">
+<h3><strong> ‣ <u> What do I need to do </u></strong><a class="headerlink" href="#strong-u-what-do-i-need-to-do-u-strong" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li>Have a look at the preexisting ontologies (?) and select the one that are of interest</li>
+<li>Think about what is important and need highlighting</li>
+</ul>
+</div>
+</div>
+<div class="section" id="knowledge-graphs">
+<h2>Knowledge graphs<a class="headerlink" href="#knowledge-graphs" title="Permalink to this heading">#</a></h2>
+<p><a class="reference external" href="https://data.open.ac.uk/" rel="noopener noreferrer" target="_blank">OU Open knowledge graph</a></p>
+<p><strong>Other examples</strong></p>
+<ul class="simple">
+<li><a class="reference external" href="https://aida.kmi.open.ac.uk/dashboard/conference/Neural%20Information%20Processing%20Systems%20(NeurIPS)" rel="noopener noreferrer" target="_blank">from Angelo</a> - This data is extracted from knowledge graph. (is it ?) - How?</li>
+</ul>
+<div class="admonition-question admonition">
+<p class="first admonition-title">Question</p>
+<ul class="last simple">
+<li>Should I embed my own work (thesis) there ?</li>
+<li>Better to generate my own parent website to create a publication plateform linking different work</li>
+</ul>
+</div>
+<ul class="simple">
+<li><a class="reference external" href="https://enterprise-knowledge.com/transforming-tabular-data-into-personalized-componentized-content-using-knowledge-graphs-in-python/" rel="noopener noreferrer" target="_blank">Blog article I</a>: Transforming Tabular Data into Personalized, Componentized Content using Knowledge Graphs in Python</li>
+<li><a class="reference external" href="https://enterprise-knowledge.com/content-personalization-with-knowledge-graphs-in-python/" rel="noopener noreferrer" target="_blank">Blog article II</a>: Content Personalization with Knowledge Graphs in Python</li>
+</ul>
+<h3><strong>Web-site architecture mapping</strong></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://networkx.org/documentation/latest/tutorial.html#creating-a-graph" rel="noopener noreferrer" target="_blank">networkx</a>: Python library to plot knowledge graphs</li>
+<li><strong>Notebook</strong><ul>
+<li>Semantic web workflow (?)</li>
+<li>Thesaurus for tags (<a class="reference external" href="https://vocabs.ardc.edu.au/viewById/119" rel="noopener noreferrer" target="_blank">Astro</a>, <a class="reference external" href="https://github.com/astrothesaurus/UAT/blob/master/UAT.csv" rel="noopener noreferrer" target="_blank">GH csv</a> )</li>
+</ul>
+</li>
+<li><strong>Storage</strong><ul>
+<li>Files, folder mapping</li>
+<li>Ontology (<a class="reference external" href="https://service.tib.eu/webvowl/#sioc" rel="noopener noreferrer" target="_blank">Webvowl</a>, <a class="reference external" href="https://stackoverflow.com/questions/13147864/how-to-create-an-ontology-from-raw-data-csv" rel="noopener noreferrer" target="_blank">RDF from CSV</a>)</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="sitemap">
+<h2>Sitemap<a class="headerlink" href="#sitemap" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://www.xml-sitemaps.com/details-deugz.github.io-a2e845a8b.html" rel="noopener noreferrer" target="_blank">Sitemap and xml generator</a></li>
+</ul>
+<p><strong>Convert xml to owl</strong>:</p>
+<p><a class="reference external" href="https://xml2owl.sourceforge.net/" rel="noopener noreferrer" target="_blank">Link</a></p>
+</div>
+<div class="section" id="rss">
+<h2>RSS ?<a class="headerlink" href="#rss" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li>RSS feed</li>
+<li>Atom</li>
+</ul>
+</div>
+<div class="section" id="vrac-links">
+<h2>Vrac links<a class="headerlink" href="#vrac-links" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://rml.io/yarrrml/" rel="noopener noreferrer" target="_blank">yarrrml</a></li>
+</ul>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="comments">
+<h1>Comments<a class="headerlink" href="#comments" title="Permalink to this heading">#</a></h1>
+<hr class="docutils" />
+<br>
+<div class="full-width docutils">
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 docutils">
+<div class="sd-col sd-d-flex-row sd-col-5 sd-col-xs-5 sd-col-sm-5 sd-col-md-5 sd-col-lg-5 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header bg-light docutils">
+<p class="sd-card-text"><strong>Notes</strong></p>
+</div>
+<div class="sd-card-body docutils">
+<br>
+<blockquote class="trello-card">
+<a href="https://trello.com/c/SU22msQo/35-semantic-web">Trello Card</a>
+</blockquote>
+<script src="https://p.trellocdn.com/embed.min.js"></script>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header bg-light docutils">
+<p class="sd-card-text"><strong>Page</strong></p>
+</div>
+<div class="sd-card-body docutils">
+<br>
+<ul class="simple">
+<li><p class="sd-card-text first">Author:  Vincent Deguin;</p>
+</li>
+<li><p class="sd-card-text first">Status:  <img alt="flag alt &gt;" src="../../_images/Under_construction.svg" />  <span class="hovertext" data-hover="To be Reviewed">🔎</span></p>
+</li>
+<li><p class="sd-card-text first">Reviewed: <span class="hovertext" data-hover="Insert here who has done what">❌</span></p>
+</li>
+<li><p class="sd-card-text first">Updated: 28/05/2023</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-col-3 sd-col-xs-3 sd-col-sm-3 sd-col-md-3 sd-col-lg-3 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header bg-light docutils">
+<p class="sd-card-text"><span style="float: right"><img alt="flag alt &gt;" src="../../_images/coins-money-svgrepo-com.svg" /></span><strong>Help</strong></p>
+</div>
+<div class="sd-card-body docutils">
+<br>
+<script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Buy me a coffee', '#317315', 'O4O6EZO78');kofiwidget2.draw();</script> 
+<br>
+<br>
+<p class="sd-card-text">or</p>
+<br>
+<p class="sd-card-text"><img alt="flag alt &gt;" src="../../_images/patreon-svgrepo-com.svg" /> <a class="reference external" href="https://www.patreon.com/Science_for_the_People" rel="noopener noreferrer" target="_blank">Patreon</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="https://utteranc.es/client.js"
+        repo="Deugz/nb-tools"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Connecter\SemanticWeb"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../API/api.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">API</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../Collaborer/Collaborer-Main.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Collaborer</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Semantic Web</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#usefull-information">Usefull information</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#readings">Readings</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#more">More</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#semantic-web-and-executable-books">Semantic Web and Executable books</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strong-u-semantic-web-and-science-u-strong"><strong> ‣ <u> Semantic Web and Science </u></strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#meta-tags-for-html-publication">Meta tags for html publication</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><strong> ‣ <u> Semantic Web and Science </u></strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#strong-example-strong-life-sciences"><strong> ‣ ‣ Example: </strong> Life Sciences</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#strong-example-strong-scidata"><strong> ‣ ‣ Example: </strong> SciData</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#from-raw-html-to-metadata">From RAW HTML To Metadata</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strong-u-microdata-u-strong"><strong> ‣ <u> Microdata </u></strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#strong-example-strong"><strong> ‣ ‣ Example </strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strong-u-scientific-articles-metadata-u-strong"><strong> ‣ <u> Scientific Articles Metadata </u></strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#strong-jats-strong"><strong> ‣ ‣ JATS </strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#from-metadata-in-html-to-rdf">From Metadata in HTML to RDF</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ontologies">Ontologies</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strong-u-definition-u-strong"><strong> ‣ <u> Definition </u></strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strong-u-build-a-simple-ontologie-u-strong"><strong> ‣ <u> Build a simple ontologie </u></strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strong-u-online-tutorials-u-strong"><strong> ‣ <u> Online tutorials </u></strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strong-u-ontology-matching-u-strong"><strong> ‣ <u> Ontology matching </u></strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#to-do">To do</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strong-u-what-do-i-need-to-do-u-strong"><strong> ‣ <u> What do I need to do </u></strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#knowledge-graphs">Knowledge graphs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sitemap">Sitemap</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rss">RSS ?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vrac-links">Vrac links</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#comments">Comments</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By <strong>Vincent Deguin</strong> (with ❤️)
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

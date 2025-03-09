@@ -16,9 +16,9 @@ justify-content: center;
 
 h1 {
     font-family: Garamond;
-    text-align: center !important ;
+    text-align:center;
     padding:20px !important;
-    margin-bottom:30px; ;
+    margin-bottom:30px; 
     font-size: 5em !important; 
     color: black !important; 
 }
